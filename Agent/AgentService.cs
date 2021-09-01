@@ -34,8 +34,8 @@ namespace Agent
         }
 
         protected override void OnStart(string[] args)
-        {            
-            WriteToFile("Service is started at " + DateTime.Now);
+        {
+            AlertHelper.Alert(AlertConsts.AGENT_STARTED, "Service is started at " + DateTime.Now, EAlertLevel.OFF);            
             timerCycle.Elapsed += new ElapsedEventHandler(OnElapsedCycleTime);
             timerCycle.Interval = SystemInfo.CycleTimer;
             timerCycle.Enabled = true;
@@ -46,14 +46,13 @@ namespace Agent
         }
 
         private void OnElapsedKeepAliveTime(object sender, ElapsedEventArgs e)
-        {
-            //TODO: Save on DB and if no connection or error, write on file.
-            WriteToFile("Keep Alive at " + DateTime.Now);
+        {            
+            AlertHelper.Alert(AlertConsts.AGENT_KEEPALIVE, "Keep Alive at " + DateTime.Now, EAlertLevel.OFF);
         }
 
         protected override void OnStop()
         {
-            WriteToFile("Service is stopped at " + DateTime.Now);
+            AlertHelper.Alert(AlertConsts.AGENT_STOPPED, "Service is stopped at " + DateTime.Now, EAlertLevel.OFF);
         }
 
         private void OnElapsedCycleTime(object source, ElapsedEventArgs e)
@@ -61,29 +60,6 @@ namespace Agent
             
         }
 
-        public void WriteToFile(string Message)
-        {
-            string path = AppDomain.CurrentDomain.BaseDirectory + "\\Logs";
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-            }
-            string filepath = AppDomain.CurrentDomain.BaseDirectory + "\\Logs\\AgentLog_" + DateTime.Now.Date.ToShortDateString().Replace('/', '_') + ".txt";
-            if (!File.Exists(filepath))
-            {
-                // Create a file to write to.   
-                using (StreamWriter sw = File.CreateText(filepath))
-                {
-                    sw.WriteLine(Message);
-                }
-            }
-            else
-            {
-                using (StreamWriter sw = File.AppendText(filepath))
-                {
-                    sw.WriteLine(Message);
-                }
-            }
-        }
+        
     }
 }
