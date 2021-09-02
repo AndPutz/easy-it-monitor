@@ -1,0 +1,13 @@
+﻿Instalando o assembly 'C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\bin\Debug\EasyITWatchDog.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\bin\Debug\EasyITWatchDog.InstallLog
+   assemblypath = C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\bin\Debug\EasyITWatchDog.exe
+Instalando o serviço EasyITWatchDogAgent...
+Serviço EasyITWatchDogAgent foi instalado com êxito.
+Criando a origem de EventLog EasyITWatchDogAgent no log Application...
+Confirmando o assembly 'C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\bin\Debug\EasyITWatchDog.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\bin\Debug\EasyITWatchDog.InstallLog
+   assemblypath = C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\bin\Debug\EasyITWatchDog.exe
