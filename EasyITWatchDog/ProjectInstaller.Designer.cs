@@ -1,11 +1,11 @@
 ﻿using Infra;
 
-namespace Agent
+namespace EasyITWatchDog
 {
-    partial class AgentInstaller
+    partial class ProjectInstaller
     {
         /// <summary>
-        /// Design Variable 
+        /// Variável de designer necessária.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
@@ -41,9 +41,9 @@ namespace Agent
             // 
             // serviceInstaller1
             // 
-            this.serviceInstaller1.ServiceName = SystemInfo.AGENT_MONITOR_NAME;
-            this.serviceInstaller1.DisplayName = SystemInfo.AGENT_MONITOR_NAME;
-            this.serviceInstaller1.Description = SystemInfo.AGENT_MONITOR_DESCRIPTION;
+            this.serviceInstaller1.ServiceName = SystemInfo.AGENT_WATCHDOG_NAME;
+            this.serviceInstaller1.DisplayName = SystemInfo.AGENT_WATCHDOG_NAME;
+            this.serviceInstaller1.Description = SystemInfo.AGENT_WATCHDOG_DESCRIPTION;
             // 
             // ProjectInstaller
             // 

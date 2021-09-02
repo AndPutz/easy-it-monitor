@@ -36,7 +36,7 @@ namespace Agent
             monitorService = new MonitorService();
             monitorProcess = new MonitorProcess();
 
-            AlertHelper.Alert(AlertConsts.AGENT_STARTED, "Service is started at " + DateTime.Now + " with TimerProcess on " + monitorService.Params.TimerProcess.ToString() + " ms, Keep Alive Timer on " + monitorService.Params.TimerKeepAlive.ToString() + " ms, Services: " + monitorService.Params.Services.Count.ToString() + " and Processes: " + monitorService.Params.Processes.Count.ToString(), EAlertLevel.OFF);
+            AlertHelper.Alert(AlertConsts.AGENT_MONITOR_STARTED, "Service is started at " + DateTime.Now + " with TimerProcess on " + monitorService.Params.TimerProcess.ToString() + " ms, Keep Alive Timer on " + monitorService.Params.TimerKeepAlive.ToString() + " ms, Services: " + monitorService.Params.Services.Count.ToString() + " and Processes: " + monitorService.Params.Processes.Count.ToString(), EAlertLevel.OFF);
             timerCycle.Elapsed += new ElapsedEventHandler(OnElapsedCycleTime);
             timerCycle.Interval = monitorService.Params.TimerProcess;
             timerCycle.Enabled = true;
@@ -48,12 +48,12 @@ namespace Agent
 
         private void OnElapsedKeepAliveTime(object sender, ElapsedEventArgs e)
         {            
-            AlertHelper.Alert(AlertConsts.AGENT_KEEPALIVE, "Keep Alive at " + DateTime.Now, EAlertLevel.OFF);
+            AlertHelper.Alert(AlertConsts.AGENT_MONITOR_KEEPALIVE, "Keep Alive at " + DateTime.Now, EAlertLevel.OFF);
         }
 
         protected override void OnStop()
         {
-            AlertHelper.Alert(AlertConsts.AGENT_STOPPED, "Service is stopped at " + DateTime.Now, EAlertLevel.OFF);
+            AlertHelper.Alert(AlertConsts.AGENT_MONITOR_STOPPED, "Service is stopped at " + DateTime.Now, EAlertLevel.OFF);
         }
 
         private void OnElapsedCycleTime(object source, ElapsedEventArgs e)

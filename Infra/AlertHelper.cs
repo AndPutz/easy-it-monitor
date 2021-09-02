@@ -57,14 +57,19 @@ namespace Infra
 
     public class AlertConsts
     {
-        public const string AGENT_STOPPED = "AGENT_STOPPED";
-        public const string AGENT_KEEPALIVE = "AGENT_KEEPALIVE";
-        public const string AGENT_STARTED = "AGENT_STARTED";
+        public const string AGENT_MONITOR_STOPPED = "AGENT_MONITOR_STOPPED";
+        public const string AGENT_MONITOR_KEEPALIVE = "AGENT_MONITOR_KEEPALIVE";
+        public const string AGENT_MONITOR_STARTED = "AGENT_MONITOR_STARTED";
         public const string AGENT_MONITOR_DISK_ERROR = "AGENT_MONITOR_DISK_ERROR";
         public const string AGENT_MONITOR_SAVE_DISK_ERROR = "AGENT_MONITOR_SAVE_DISK_ERROR";
         public const string AGENT_MONITOR_SERVICE_DONT_EXIST = "AGENT_MONITOR_SERVICE_DONT_EXIST";
+        public const string AGENT_WATCHDOG_STOPPED = "AGENT_WATCHDOG_STOPPED";
+        public const string AGENT_WATCHDOG_KEEPALIVE = "AGENT_WATCHDOG_KEEPALIVE";
+        public const string AGENT_WATCHDOG_STARTED = "AGENT_WATCHDOG_STARTED";
         public const string AGENT_WATCHDOG_SERVICE_OFF = "AGENT_WATCHDOG_SERVICE_OFF";
         public const string AGENT_WATCHDOG_SERVICE_ON = "AGENT_WATCHDOG_SERVICE_ON";
+        public const string AGENT_WATCHDOG_PROCESS_OFF = "AGENT_WATCHDOG_PROCESS_OFF";
+        public const string AGENT_WATCHDOG_PROCESS_ON = "AGENT_WATCHDOG_PROCESS_ON";
     }
 
     public enum EAlertLevel

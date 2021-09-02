@@ -1,8 +1,8 @@
 ﻿using Infra;
 
-namespace Agent
+namespace EasyITWatchDog
 {
-    partial class AgentMonitor
+    partial class AgentWatchDog
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -31,7 +31,7 @@ namespace Agent
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            this.ServiceName = SystemInfo.AGENT_MONITOR_NAME;
+            this.ServiceName = SystemInfo.AGENT_WATCHDOG_NAME;
         }
 
         #endregion
