@@ -3,10 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace Domain.Service.UseCases
@@ -37,7 +34,7 @@ namespace Domain.Service.UseCases
             Services = new List<ServiceEntity>();
         }
 
-        public static AgentParams Load()
+        public void Load()
         {
             AgentParams oConfig = null;
 
@@ -53,6 +50,12 @@ namespace Domain.Service.UseCases
                     {
 
                         oConfig = (AgentParams)oXmlSerializer.Deserialize(oStreamReader);
+
+                        this.MaxRecoveryAttempts = oConfig.MaxRecoveryAttempts;
+                        this.Processes = oConfig.Processes;
+                        this.Services = oConfig.Services;
+                        this.TimerKeepAlive = oConfig.TimerKeepAlive;
+                        this.TimerProcess = oConfig.TimerProcess;                        
                     }
 
                 }
@@ -66,10 +69,10 @@ namespace Domain.Service.UseCases
                 InitConfig();
             }
 
-            return oConfig;
+            
         }
 
-        public static void Save(AgentParams oClassConfig)
+        public void Save()
         {
             String sFilePath = AppDomain.CurrentDomain.BaseDirectory + @"\AgentParams.xml";
 
@@ -78,7 +81,7 @@ namespace Domain.Service.UseCases
             using (StreamWriter oTextWriter = new StreamWriter(sFilePath))
             {
 
-                oXmlSerializer.Serialize(oTextWriter, oClassConfig);
+                oXmlSerializer.Serialize(oTextWriter, this);
             }
         }
 
@@ -101,32 +104,39 @@ namespace Domain.Service.UseCases
         /// <summary>
         /// Initialize example of Config File with a discovery of all services and process that are running.
         /// </summary>
-        private static void InitConfig()
-        {
-            AgentParams oConfig = new AgentParams();
+        private void InitConfig()
+        {            
+            ServiceController[] ListServices = ServiceController.GetServices();
 
-            ServiceController[] oListServices = ServiceController.GetServices();
+            Process[] ListProcesses = Process.GetProcesses();
 
-            Process[] oListProcesses = Process.GetProcesses();
+            Services = new List<ServiceEntity>();
+            Processes = new List<ProcessEntity>();
+            MaxRecoveryAttempts = 3;
+            TimerKeepAlive = 62000;
+            TimerProcess = 5000;
 
-            oConfig.Services = new List<ServiceEntity>();
-            oConfig.Processes = new List<ProcessEntity>();
-            oConfig.MaxRecoveryAttempts = 3;
-            oConfig.TimerKeepAlive = 62000;
-            oConfig.TimerProcess = 5000;
-
-            foreach (ServiceController oService in oListServices)
+            foreach (ServiceController _Service in ListServices)
             {
-                oConfig.Services.Add(new ServiceEntity() { Name = oService.DisplayName });
+                ServiceEntity serviceEntity = new ServiceEntity() { Name = _Service.DisplayName, CycleTime = 0 };
+
+                if (Services.Contains(serviceEntity) == false)
+                    Services.Add(serviceEntity);
             }
 
-            foreach (Process oProcess in oListProcesses)
+            foreach (Process _Process in ListProcesses)
             {
-                oConfig.Processes.Add(new ProcessEntity() { Name = oProcess.ProcessName, Detail = "" });
+                ProcessEntity processEntity = new ProcessEntity() { Name = _Process.ProcessName, Detail = "", CycleTime = 0 };
+
+                if (Processes.Contains(processEntity) == false)
+                    Processes.Add(processEntity);
             }
 
-            Save(oConfig);
+            Save();            
+
+            //TODO: Send to Web Api discovery services and process
 
         }
+        
     }
 }

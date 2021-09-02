@@ -6,9 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Management;
 using System.ServiceProcess;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Domain.Service.UseCases
 {
@@ -31,36 +29,34 @@ namespace Domain.Service.UseCases
         public override void Monitoring()
         {
             base.Monitoring();
-
-            //TODO: Implementation of Services Config to discovery all services and set each wanna monitor
-            //if (Parameters.HasServicesParam())
-            //{
+            
+            if (Params.HasServicesParam())
+            {
                 MonitoringProcessing();
 
                 IdentifyServicesNotInstalled();
-            //}
+            }
 
         }
 
         private void MonitoringProcessing()
         {
             ServiceController[] ListServices = ServiceController.GetServices();
-
-            //TODO: Param Service
-            //foreach (ServiceController Service in ListServices)
-            //{
-            //    if (IsServiceConfiguratedToMonitor(Service))
-            //    {
-            //        if (Service.Status == ServiceControllerStatus.Running)
-            //        {
-            //            CollectData(Service, GetServiceParam(Service));
-            //        }
-            //    }
-            //    else
-            //    {
-            //        Service.Dispose();
-            //    }
-            //}
+            
+            foreach (ServiceController Service in ListServices)
+            {
+                if (IsServiceConfiguratedToMonitor(Service))
+                {
+                    if (Service.Status == ServiceControllerStatus.Running)
+                    {
+                        CollectData(Service, GetServiceParam(Service));
+                    }
+                }
+                else
+                {
+                    Service.Dispose();
+                }
+            }
 
         }
 
@@ -93,17 +89,16 @@ namespace Domain.Service.UseCases
             List<string> ServicesNotInstalled = new List<string>();
 
             ServiceController[] ListServices = ServiceController.GetServices();
+            
+            foreach (ServiceEntity ServiceItem in Params.Services)
+            {
+                ServiceController Validation = ListServices.FirstOrDefault(f => f.ServiceName.Equals(ServiceItem.Name) || f.DisplayName.Equals(ServiceItem.Name));
 
-            //TODO: Param Services
-            //foreach (ServiceEntity ServiceItem in Parameters.Services)
-            //{
-            //    ServiceController Validation = ListServices.FirstOrDefault(f => f.ServiceName.Equals(ServiceItem.Name) || f.DisplayName.Equals(ServiceItem.Name));
-
-            //    if (Validation == null)
-            //    {
-            //        ServicesNotInstalled.Add(ServiceItem.Name);
-            //    }
-            //}
+                if (Validation == null)
+                {
+                    ServicesNotInstalled.Add(ServiceItem.Name);
+                }
+            }
 
             return ServicesNotInstalled;
         }
@@ -162,15 +157,15 @@ namespace Domain.Service.UseCases
             }
         }
 
-        //private bool IsServiceConfiguratedToMonitor(ServiceController Service)
-        //{
-        //    return Parameters.Services.Exists(f => f.Name.Equals(Service.DisplayName) || f.Name.Equals(Service.ServiceName));
-        //}
+        private bool IsServiceConfiguratedToMonitor(ServiceController Service)
+        {
+            return Params.Services.Exists(f => f.Name.Equals(Service.DisplayName) || f.Name.Equals(Service.ServiceName));
+        }
 
-        //private ServiceEntity GetServiceParam(ServiceController Service)
-        //{
-        //    return Parameters.Services.FirstOrDefault(f => f.Name.Equals(Service.DisplayName) || f.Name.Equals(Service.ServiceName));
-        //}
+        private ServiceEntity GetServiceParam(ServiceController Service)
+        {
+            return Params.Services.FirstOrDefault(f => f.Name.Equals(Service.DisplayName) || f.Name.Equals(Service.ServiceName));
+        }
 
         private float GetCpuFromMachine()
         {

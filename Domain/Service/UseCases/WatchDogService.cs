@@ -53,30 +53,29 @@ namespace Domain.Service.UseCases
             {
                 ServiceController[] oListServices = ServiceController.GetServices();
                 foreach (ServiceController ServiceContr in oListServices)
-                {
-                    //TODO: Service param
-                    //ServiceEntity ServiceToWatch = Parameters.Services.FirstOrDefault(f => f.Name.Equals(ServiceContr.DisplayName));
+                {                    
+                    ServiceEntity ServiceToWatch = Params.Services.FirstOrDefault(f => f.Name.Equals(ServiceContr.DisplayName));
 
-                    //if (ServiceToWatch == null)
-                    //{
-                    //    ServiceContr.Dispose();
-                    //}
-                    //else if (ServiceContr.Status != ServiceControllerStatus.Running)
-                    //{
-                    //    if (!ListRecovering.Exists(fnd => fnd.Name.Equals(ServiceToWatch.Name) &&
-                    //                               fnd.RecoverType == RecoveryType.Service))
-                    //    {
-                    //        ListRecovering.Add(new RecoveryItem()
-                    //        {
-                    //            RecoverType = RecoveryType.Service,
-                    //            Name = ServiceToWatch.Name,
-                    //            Status = RecoveryStatus.Stop,
-                    //            AttempsToRecover = 0,
-                    //            ProcessItem = null,
-                    //            ServiceItem = ServiceContr
-                    //        });
-                    //    }
-                    //}
+                    if (ServiceToWatch == null)
+                    {
+                        ServiceContr.Dispose();
+                    }
+                    else if (ServiceContr.Status != ServiceControllerStatus.Running)
+                    {
+                        if (!ListRecovering.Exists(fnd => fnd.Name.Equals(ServiceToWatch.Name) &&
+                                                   fnd.RecoverType == RecoveryType.Service))
+                        {
+                            ListRecovering.Add(new RecoveryItem()
+                            {
+                                RecoverType = RecoveryType.Service,
+                                Name = ServiceToWatch.Name,
+                                Status = RecoveryStatus.Stop,
+                                AttempsToRecover = 0,
+                                ProcessItem = null,
+                                ServiceItem = ServiceContr
+                            });
+                        }
+                    }
                 }
             }
 
@@ -88,19 +87,16 @@ namespace Domain.Service.UseCases
         /// </summary>
         /// <returns></returns>
         private bool HasParameters()
-        {
-            //TODO: Service Param
-            //if (Parameters != null && Parameters.Services != null && Parameters.Services.Count > 0)
-            //    return true;
-            //else
-            //{
-            //    if (ListRecovering != null)
-            //        ListRecovering.Clear();
+        {            
+            if (Params != null && Params.Services != null && Params.Services.Count > 0)
+                return true;
+            else
+            {
+                if (ListRecovering != null)
+                    ListRecovering.Clear();
 
-            //    return false;
-            //}
-
-            return true;
+                return false;
+            }            
         }
 
         private bool Recover(RecoveryItem Item)
@@ -128,12 +124,12 @@ namespace Domain.Service.UseCases
                         Item.AttempsToRecover++;
                     }
                 }
-                //else if (Item.AttempsToRecover >= Parameters.MaxRecoveryAttempts)
-                //{
-                //    Item.Status = RecoveryStatus.NotPossible;
+                else if (Item.AttempsToRecover >= Params.MaxRecoveryAttempts)
+                {
+                    Item.Status = RecoveryStatus.NotPossible;
 
-                //    Alert("WATCHDOG_SERVICE_NOT_POSSIBLE", "AFTER " + Parameters.MaxRecoveryAttempts.ToString() + " ATTEMPS WAS NOT POSSIBLE TO START THE " + Item.ServiceItem.DisplayName, LOG_LEVEL.WARNING);
-                //}
+                    AlertHelper.Alert("WATCHDOG_SERVICE_NOT_POSSIBLE", "AFTER " + Params.MaxRecoveryAttempts.ToString() + " ATTEMPS WAS NOT POSSIBLE TO START THE " + Item.ServiceItem.DisplayName, EAlertLevel.WARNING);
+                }
             }
             else
             {

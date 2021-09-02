@@ -14,7 +14,9 @@ namespace Domain.Service.UseCases
 
 
         public Monitor()
-        {                        
+        {
+            Params = new AgentParams();
+            Params.Load();
             DTO = new DTOMonitor();            
             _MachineData = new MachineData();
             MonitoringItems = new List<MonitorDetail>();            

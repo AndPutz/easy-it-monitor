@@ -11,3 +11,5 @@ C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\EasyITMonitorAgent.exe
 C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\EasyITMonitorAgent.pdb
 C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\obj\Debug\EasyITMonitorAgent.exe
 C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\obj\Debug\EasyITMonitorAgent.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\Domain.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\Domain.pdb

@@ -17,5 +17,7 @@ namespace Domain.Service.UseCases
 
         //TODO: remover after Api implementation
         public Int64 IdMachine { get; set; }
+
+        public AgentParams Params { get; set; }
     }
 }

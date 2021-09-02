@@ -52,11 +52,11 @@
     <Compile Include="AgentInstaller.Designer.cs">
       <DependentUpon>AgentInstaller.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgentService.cs">
+    <Compile Include="AgentMonitor.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="AgentService.Designer.cs">
-      <DependentUpon>AgentService.cs</DependentUpon>
+    <Compile Include="AgentMonitor.Designer.cs">
+      <DependentUpon>AgentMonitor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,6 +70,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{f50873f8-5f2e-435b-9bf6-41010a789390}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infra\Infra.csproj">
       <Project>{78D2F09A-9449-477A-9C82-C312E719E1C2}</Project>
       <Name>Infra</Name>

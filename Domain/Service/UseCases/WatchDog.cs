@@ -10,9 +10,9 @@ namespace Domain.Service.UseCases
         protected List<MonitorDetail> ListMonitorDetails = null;
 
         public WatchDog()
-        {            
-            //TODO: Service paramters
-            //this.Parameters = sqoClassConfigTemplateDynWatchDog.Load();            
+        {
+            Params = new AgentParams();
+            Params.Load();
             this.ListRecovering = new List<RecoveryItem>();
             this.ListMonitorDetails = new List<MonitorDetail>();
         }

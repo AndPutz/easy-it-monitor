@@ -17,7 +17,7 @@ namespace Agent
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new AgentService()
+                new AgentMonitor()
             };
             ServiceBase.Run(ServicesToRun);
         }

@@ -50,6 +50,7 @@
     <Compile Include="Service\Entities\Entity.cs" />
     <Compile Include="Service\Entities\Machine.cs" />
     <Compile Include="Service\Entities\MonitorDetail.cs" />
+    <Compile Include="Service\Entities\ParamEntity.cs" />
     <Compile Include="Service\Entities\ProcessEntity.cs" />
     <Compile Include="Service\Entities\RecoveryItem.cs" />
     <Compile Include="Service\Entities\ServiceEntity.cs" />
