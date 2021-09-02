@@ -7,4 +7,3 @@ C:\Pessoal\EasyITMonitor\easy-it-monitor\Infra\obj\Debug\Infra.csproj.GenerateRe
 C:\Pessoal\EasyITMonitor\easy-it-monitor\Infra\obj\Debug\Infra.csproj.CopyComplete
 C:\Pessoal\EasyITMonitor\easy-it-monitor\Infra\obj\Debug\Infra.dll
 C:\Pessoal\EasyITMonitor\easy-it-monitor\Infra\obj\Debug\Infra.pdb
-C:\Pessoal\EasyITMonitor\easy-it-monitor\Infra\obj\Debug\Infra.csprojAssemblyReference.cache

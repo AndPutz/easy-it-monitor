@@ -17,16 +17,19 @@ namespace Infra
                     WriteToFile(Message);
                     break;
                 case EAlertLevel.ERROR:
+                    WriteToFile("ERROR: " + Message);
                     break;
                 case EAlertLevel.WARNING:
+                    WriteToFile("WARNING: " + Message);
                     break;
                 case EAlertLevel.INFO:
+                    WriteToFile("INFO: " + Message);
                     break;
                 default:
                     break;
             }
 
-            //TODO: Send Alert on Api channel and the web api will query to see the Alert Configs to send it.
+            //TODO: Send Alert on Api channel and the web api will query to see the Alert Configs to send as the frequency or period to send it.
         }
 
         private static void WriteToFile(string Message)
@@ -70,6 +73,7 @@ namespace Infra
         public const string AGENT_WATCHDOG_SERVICE_ON = "AGENT_WATCHDOG_SERVICE_ON";
         public const string AGENT_WATCHDOG_PROCESS_OFF = "AGENT_WATCHDOG_PROCESS_OFF";
         public const string AGENT_WATCHDOG_PROCESS_ON = "AGENT_WATCHDOG_PROCESS_ON";
+        public const string AGENT_AUTOMATION_CLEAN_TEMP_DIR_INFO = "AGENT_AUTOMATION_CLEAN_TEMP_DIR_INFO";
     }
 
     public enum EAlertLevel

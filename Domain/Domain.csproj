@@ -55,6 +55,7 @@
     <Compile Include="Service\Entities\RecoveryItem.cs" />
     <Compile Include="Service\Entities\ServiceEntity.cs" />
     <Compile Include="Service\UseCases\AgentParams.cs" />
+    <Compile Include="Service\UseCases\Automation.cs" />
     <Compile Include="Service\UseCases\DiskMonitor.cs" />
     <Compile Include="Service\UseCases\MachineData.cs" />
     <Compile Include="Service\UseCases\Monitor.cs" />
