@@ -7,7 +7,7 @@
     <ProjectGuid>{85C767AE-2EF0-4AC4-9C51-693BAFB11161}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Agent</RootNamespace>
-    <AssemblyName>Agent</AssemblyName>
+    <AssemblyName>EasyITMonitorAgent</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

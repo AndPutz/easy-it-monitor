@@ -55,6 +55,7 @@
     <Compile Include="Access.cs" />
     <Compile Include="ApiHelper.cs" />
     <Compile Include="EmailHelper.cs" />
+    <Compile Include="AlertHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

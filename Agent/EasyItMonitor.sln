@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agent", "Agent.csproj", "{85C767AE-2EF0-4AC4-9C51-693BAFB11161}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITMonitorAgent", "EasyITMonitorAgent.csproj", "{85C767AE-2EF0-4AC4-9C51-693BAFB11161}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "..\Infra\Infra.csproj", "{78D2F09A-9449-477A-9C82-C312E719E1C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "..\Domain\Domain.csproj", "{F50873F8-5F2E-435B-9BF6-41010A789390}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{78D2F09A-9449-477A-9C82-C312E719E1C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78D2F09A-9449-477A-9C82-C312E719E1C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78D2F09A-9449-477A-9C82-C312E719E1C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F50873F8-5F2E-435B-9BF6-41010A789390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F50873F8-5F2E-435B-9BF6-41010A789390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F50873F8-5F2E-435B-9BF6-41010A789390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F50873F8-5F2E-435B-9BF6-41010A789390}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

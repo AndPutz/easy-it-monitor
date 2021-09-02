@@ -1,0 +1,13 @@
+﻿Instalando o assembly 'C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\EasyITMonitorAgent.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\EasyITMonitorAgent.InstallLog
+   assemblypath = C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\EasyITMonitorAgent.exe
+Instalando o serviço EasyITMonitorAgent...
+Serviço EasyITMonitorAgent foi instalado com êxito.
+Criando a origem de EventLog EasyITMonitorAgent no log Application...
+Confirmando o assembly 'C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\EasyITMonitorAgent.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\EasyITMonitorAgent.InstallLog
+   assemblypath = C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\EasyITMonitorAgent.exe

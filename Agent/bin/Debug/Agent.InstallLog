@@ -24,3 +24,13 @@ Parâmetros afetados são:
    logtoconsole = 
    logfile = C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\Agent.InstallLog
    assemblypath = C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\Agent.exe
+Desinstalando o assembly 'C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\Agent.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\Agent.InstallLog
+   assemblypath = C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\Agent.exe
+Removendo a origem do EventLog EasyITMonitorAgent.
+Serviço EasyITMonitorAgent está sendo removido do sistema...
+Ocorreu uma exceção durante a desinstalação do instalador System.ServiceProcess.ServiceInstaller.
+System.ComponentModel.Win32Exception: O serviço especificado não existe como serviço instalado
+Ocorreu uma exceção ao desinstalar. Essa exceção será ignorada e a desinstalação continuará. Mas talvez o aplicativo não seja totalmente desinstalado após a conclusão da desinstalação.

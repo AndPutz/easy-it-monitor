@@ -41,8 +41,8 @@ namespace Agent
             // 
             // serviceInstaller1
             // 
-            this.serviceInstaller1.ServiceName = SystemInfo.AGENT_NAME;
-            this.serviceInstaller1.DisplayName = SystemInfo.AGENT_NAME;
+            this.serviceInstaller1.ServiceName = SystemInfo.AGENT_MONITOR_NAME;
+            this.serviceInstaller1.DisplayName = SystemInfo.AGENT_MONITOR_NAME;
             // 
             // ProjectInstaller
             // 

@@ -10,8 +10,8 @@ namespace Infra
 {
     public static class SystemInfo
     {
-        public const string AGENT_NAME = "EasyITMonitorAgent";
-        public const string DESCRIPTION = "Easy IT Monitor";       
+        public const string AGENT_MONITOR_NAME = "EasyITMonitorAgent";
+        public const string MONITOR_DESCRIPTION = "Easy IT Monitor";       
         public static int KeepAliveTimer { get; set; } = Convert.ToInt32(ConfigurationManager.AppSettings["KeepAliveTimer"]);
         public static int CycleTimer { get; set; } = Convert.ToInt32(ConfigurationManager.AppSettings["CycleTimer"]);
 

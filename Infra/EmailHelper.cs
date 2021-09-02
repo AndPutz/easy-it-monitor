@@ -10,7 +10,7 @@ namespace Infra
     public class EmailHelper
     {
         public const string HTML_BASE = "HtmlBase";
-        public const string DEFAULT_SUBJECT = SystemInfo.DESCRIPTION;
+        public const string DEFAULT_SUBJECT = SystemInfo.MONITOR_DESCRIPTION;
 
         public static string CreateHtmlBody(string title, string name, string content)
         {

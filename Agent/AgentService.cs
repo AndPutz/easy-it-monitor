@@ -24,13 +24,13 @@ namespace Agent
 
             EventLog eventLog = new EventLog();
 
-            if (!EventLog.SourceExists(SystemInfo.AGENT_NAME))
+            if (!EventLog.SourceExists(SystemInfo.AGENT_MONITOR_NAME))
             {
-                EventLog.CreateEventSource(SystemInfo.AGENT_NAME, SystemInfo.AGENT_NAME + "_Log");
+                EventLog.CreateEventSource(SystemInfo.AGENT_MONITOR_NAME, SystemInfo.AGENT_MONITOR_NAME + "_Log");
             }
 
-            eventLog.Source = SystemInfo.AGENT_NAME;
-            eventLog.Log = SystemInfo.AGENT_NAME + "_Log";
+            eventLog.Source = SystemInfo.AGENT_MONITOR_NAME;
+            eventLog.Log = SystemInfo.AGENT_MONITOR_NAME + "_Log";
         }
 
         protected override void OnStart(string[] args)
