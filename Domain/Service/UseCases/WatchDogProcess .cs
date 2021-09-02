@@ -8,7 +8,7 @@ namespace Domain.Service.UseCases
     public class WatchDogProcess : WatchDog
     {
 
-        public WatchDogProcess()            
+        public WatchDogProcess() : base()
         {
 
         }

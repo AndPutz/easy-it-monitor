@@ -12,9 +12,13 @@ namespace Domain.Service.UseCases
 {
     public class MonitorService : Monitor
     {
-        public MonitorService()
-        {
+        PerformanceCounter MemCounter = null;
+        PerformanceCounter CpuUsage = null;
 
+        public MonitorService() : base ()
+        {
+            MemCounter = new PerformanceCounter("Memory", "Available MBytes");
+            CpuUsage = new PerformanceCounter("Processor", "% Processor Time", "_Total");
         }
 
         public override void Save()
@@ -36,7 +40,6 @@ namespace Domain.Service.UseCases
 
                 IdentifyServicesNotInstalled();
             }
-
         }
 
         private void MonitoringProcessing()
@@ -142,6 +145,17 @@ namespace Domain.Service.UseCases
                 }
                 else
                 {
+                    string path = "";
+
+                    try
+                    {
+                        path = oProcess.MainModule.FileName;
+                    }
+                    catch
+                    {
+
+                    }
+
                     MonitoringItems.Add(new MonitorDetail()
                     {
                         Name = oMonitorService.Name,
@@ -151,7 +165,7 @@ namespace Domain.Service.UseCases
                         CpuUsedMachine = GetCpuFromMachine(),
                         CpuUsedProcess = GetCpuFromApp(oProcess.ProcessName),
                         AvaibleMemoryMachine = GetMemoryFromMachine(),
-                        Path = oProcess.MainModule.FileName
+                        Path = path
                     });
                 }
             }
@@ -168,15 +182,11 @@ namespace Domain.Service.UseCases
         }
 
         private float GetCpuFromMachine()
-        {
-            PerformanceCounter CpuUsage = new PerformanceCounter("Processor", "% Processor Time", "_Total");
-
+        {            
             CpuUsage.NextValue();
             Thread.Sleep(250);
 
-            float CpuUsageValue = CpuUsage.NextValue();
-
-            CpuUsage.Dispose();
+            float CpuUsageValue = CpuUsage.NextValue();            
 
             return CpuUsageValue;
         }
@@ -201,24 +211,21 @@ namespace Domain.Service.UseCases
         }
 
         private float GetMemoryFromMachine()
-        {
-            PerformanceCounter MemCounter = new PerformanceCounter("Memory", "Available MBytes");
+        {            
             MemCounter.NextValue();
             Thread.Sleep(250);
 
-            float MemValue = MemCounter.NextValue();
-
-            MemCounter.Dispose();
+            float MemValue = MemCounter.NextValue();            
 
             return MemValue;
         }
 
         private decimal GetMemoryFromApp(Process ProcessObj)
         {
-            decimal MemoryMB = 0;
+            decimal MemoryMB = 0;                        
 
             if (ProcessObj.PagedMemorySize64 > 0)
-                MemoryMB = Math.Round(Convert.ToDecimal(ProcessObj.PagedMemorySize64 / 1024) / 1024, 2);
+                MemoryMB = Math.Round(Convert.ToDecimal(ProcessObj.PagedMemorySize64 / 1024) / 1024, 2);            
 
             return MemoryMB;
         }

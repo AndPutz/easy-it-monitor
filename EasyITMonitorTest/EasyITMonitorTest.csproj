@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="AgentMonitorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AgentWatchDogTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

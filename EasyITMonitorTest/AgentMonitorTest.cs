@@ -17,9 +17,28 @@ namespace EasyITMonitorTest
                 Assert.Fail("Params not loaded");
 
             if (monitorService.Params.HasServicesParam() == false)
-                Assert.Fail("Params dont has Services");
+                Assert.Fail("Params haven't Services");
 
             Assert.IsTrue(true);
+        }
+
+        [TestMethod]
+        public void MonitorService()
+        {
+            MonitorService monitorService = new MonitorService();            
+
+            monitorService.Monitoring();
+
+            Assert.IsTrue(monitorService.MonitoringItems.Count > 0);
+        }
+
+        public void MonitorProcess()
+        {
+            MonitorProcess monitorProcess = new MonitorProcess();
+
+            monitorProcess.Monitoring();
+
+            Assert.IsTrue(monitorProcess.MonitoringItems.Count > 0);
         }
     }
 }

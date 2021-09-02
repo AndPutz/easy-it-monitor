@@ -6,7 +6,7 @@ namespace Domain.Service.UseCases
 {
     public class Monitor : UseCase
     {
-        protected List<MonitorDetail> MonitoringItems = null;
+        public List<MonitorDetail> MonitoringItems = null;
 
         protected DTOMonitor DTO = null;
 

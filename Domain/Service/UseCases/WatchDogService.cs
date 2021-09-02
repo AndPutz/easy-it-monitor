@@ -12,7 +12,7 @@ namespace Domain.Service.UseCases
     public class WatchDogService : WatchDog
     {
 
-        public WatchDogService()            
+        public WatchDogService() : base ()        
         {
 
         }

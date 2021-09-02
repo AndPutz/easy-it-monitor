@@ -9,7 +9,7 @@ namespace Domain.Service.UseCases
 {
     public class MonitorProcess : Monitor
     {
-        public MonitorProcess()
+        public MonitorProcess() : base ()
         {
 
         }
