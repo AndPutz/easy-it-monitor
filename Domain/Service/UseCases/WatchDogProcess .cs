@@ -24,7 +24,7 @@ namespace Domain.Service.UseCases
                 for (int nIdx = 0; nIdx < ListRecovering.Count; nIdx++)
                 {
                     RecoveryItem RecoverItem = ListRecovering[nIdx];
-                    AlertHelper.Alert(AlertConsts.AGENT_WATCHDOG_PROCESS_OFF, "PROCESS " + RecoverItem.ProcessItem.ProcessName + " OFF", EAlertLevel.WARNING);
+                    AlertHelper.Alert(AlertConsts.AGENT_WATCHDOG_PROCESS_OFF, "PROCESS " + RecoverItem.ProcessItem.ProcessName + " OFF", EAlertLevel.HIGH);
 
                     if (Recover(RecoverItem))
                     {

@@ -28,7 +28,7 @@ namespace Domain.Service.UseCases
                 for (int nIdx = 0; nIdx < ListRecovering.Count; nIdx++)
                 {
                     RecoveryItem RecoverItem = ListRecovering[nIdx];
-                    AlertHelper.Alert(AlertConsts.AGENT_WATCHDOG_SERVICE_OFF, "SERVICE " + RecoverItem.ServiceItem.DisplayName + " OFF", EAlertLevel.WARNING);
+                    AlertHelper.Alert(AlertConsts.AGENT_WATCHDOG_SERVICE_OFF, "SERVICE " + RecoverItem.ServiceItem.DisplayName + " OFF", EAlertLevel.HIGH);
 
                     if (Recover(RecoverItem))
                     {
@@ -128,7 +128,7 @@ namespace Domain.Service.UseCases
                 {
                     Item.Status = RecoveryStatus.NotPossible;
 
-                    AlertHelper.Alert("WATCHDOG_SERVICE_NOT_POSSIBLE", "AFTER " + Params.MaxRecoveryAttempts.ToString() + " ATTEMPS WAS NOT POSSIBLE TO START THE " + Item.ServiceItem.DisplayName, EAlertLevel.WARNING);
+                    AlertHelper.Alert("WATCHDOG_SERVICE_NOT_POSSIBLE", "AFTER " + Params.MaxRecoveryAttempts.ToString() + " ATTEMPS WAS NOT POSSIBLE TO START THE " + Item.ServiceItem.DisplayName, EAlertLevel.HIGH);
                 }
             }
             else

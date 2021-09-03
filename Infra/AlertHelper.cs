@@ -16,11 +16,17 @@ namespace Infra
                 case EAlertLevel.OFF:
                     WriteToFile(Message);
                     break;
-                case EAlertLevel.ERROR:
-                    WriteToFile("ERROR: " + Message);
+                case EAlertLevel.CRITICAL:
+                    WriteToFile("CRITICAL: " + Message);
                     break;
-                case EAlertLevel.WARNING:
-                    WriteToFile("WARNING: " + Message);
+                case EAlertLevel.HIGH:
+                    WriteToFile("HIGH: " + Message);
+                    break;
+                case EAlertLevel.MEDIUM:
+                    WriteToFile("MEDIUM: " + Message);
+                    break;
+                case EAlertLevel.LOW:
+                    WriteToFile("LOW: " + Message);
                     break;
                 case EAlertLevel.INFO:
                     WriteToFile("INFO: " + Message);
@@ -74,13 +80,16 @@ namespace Infra
         public const string AGENT_WATCHDOG_PROCESS_OFF = "AGENT_WATCHDOG_PROCESS_OFF";
         public const string AGENT_WATCHDOG_PROCESS_ON = "AGENT_WATCHDOG_PROCESS_ON";
         public const string AGENT_AUTOMATION_CLEAN_TEMP_DIR_INFO = "AGENT_AUTOMATION_CLEAN_TEMP_DIR_INFO";
+        public const string AGENT_AUTOMATIONIT_CLEANTEMP_UNAUTHORIZED = "AGENT_AUTOMATIONIT_CLEANTEMP_UNAUTHORIZED";
     }
 
     public enum EAlertLevel
     {
         OFF,
-        ERROR,
-        WARNING,
+        CRITICAL,
+        HIGH,
+        MEDIUM,
+        LOW,
         INFO
     }
 

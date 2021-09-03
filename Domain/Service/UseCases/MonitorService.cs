@@ -78,7 +78,7 @@ namespace Domain.Service.UseCases
 
                 ErrorMessage = ErrorMessage.Substring(0, ErrorMessage.Length - 1);
 
-                AlertHelper.Alert(AlertConsts.AGENT_MONITOR_SERVICE_DONT_EXIST, "SERVICES: " + ErrorMessage + " DONT EXISTS", EAlertLevel.WARNING);                
+                AlertHelper.Alert(AlertConsts.AGENT_MONITOR_SERVICE_DONT_EXIST, "SERVICES: " + ErrorMessage + " DONT EXISTS", EAlertLevel.HIGH);                
             }
         }
 

@@ -19,8 +19,12 @@ namespace Domain.Service.UseCases
             AlertHelper.Alert(AlertConsts.AGENT_AUTOMATION_CLEAN_TEMP_DIR_INFO, MemorySizeMB.ToString() + " MB WILL BE CLEANED IN TEMP FOLDER", EAlertLevel.INFO);
 
             CleanTempFolder(tempPath);
-                
-            AlertHelper.Alert(AlertConsts.AGENT_AUTOMATION_CLEAN_TEMP_DIR_INFO, "TEMP FOLDER WAS CLEANED - " + MemorySizeMB.ToString() + " MB", EAlertLevel.INFO);            
+
+            double MemorySizeMBAfter = GetFolderSize(tempPath);
+
+            double SizeDeleted = MemorySizeMB - MemorySizeMBAfter;
+
+            AlertHelper.Alert(AlertConsts.AGENT_AUTOMATION_CLEAN_TEMP_DIR_INFO, "TEMP FOLDER WAS CLEANED - " + SizeDeleted.ToString() + " MB", EAlertLevel.INFO);            
         }
 
         public void DeleteInternetHistory()
@@ -36,9 +40,82 @@ namespace Domain.Service.UseCases
         private void CleanTempFolder(string path)
         {
             string[] filesName = Directory.GetFiles(path);
-            
+
+            DirectoryInfo directoryInfo = new DirectoryInfo(path);
+
+            string MessageUnauthorizedAccess = DeleteFiles(filesName);
+
+            DirectoryInfo[] directories = directoryInfo.GetDirectories();
+
+            foreach (DirectoryInfo directory in directories)
+            {
+                MessageUnauthorizedAccess += DeleteFiles(Directory.GetFiles(directory.FullName));
+                MessageUnauthorizedAccess += DeleteDirectoriesRecursive(directory);
+            }
+
+            if(string.IsNullOrWhiteSpace(MessageUnauthorizedAccess) == false)
+            {
+                AlertHelper.Alert("AGENT_AUTOMATIONIT_CLEANTEMP_UNAUTHORIZED", "FILES NOT AUTHORIZED: " + MessageUnauthorizedAccess, EAlertLevel.MEDIUM);
+            }
+
             //TODO: CleanTempFolder
-            
+
+        }
+
+        private string DeleteFiles(string[] filesName)
+        {
+            //TODO: Convert to Json
+            string FilesMessageUnauthorizedAccess = "";
+
+            foreach (string filePath in filesName)
+            {
+                try
+                {
+                    File.Delete(filePath);
+                }
+                catch (UnauthorizedAccessException)
+                {
+                    FilesMessageUnauthorizedAccess += filePath + " | ";
+                }
+                catch 
+                { 
+                }
+            }
+
+            return FilesMessageUnauthorizedAccess;
+        }
+
+        private string DeleteDirectoriesRecursive(DirectoryInfo directoryRoot)
+        {
+            string MessageUnauthorizedAccess = "";
+
+            DirectoryInfo[] directories = directoryRoot.GetDirectories();
+
+            foreach (DirectoryInfo directory in directories)
+            {
+                MessageUnauthorizedAccess += DeleteFiles(Directory.GetFiles(directory.FullName));
+                MessageUnauthorizedAccess += DeleteDirectoriesRecursive(directory);
+
+                try
+                {
+                    Directory.Delete(directory.FullName);
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+            try
+            {
+                Directory.Delete(directoryRoot.FullName);
+            }
+            catch(Exception ex)
+            {
+
+            }
+
+            return MessageUnauthorizedAccess;
         }
 
         private double GetFolderSize(string path)

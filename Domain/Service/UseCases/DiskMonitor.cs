@@ -48,7 +48,7 @@ namespace Domain.Service.UseCases
             }
             catch (Exception ex)
             {
-                AlertHelper.Alert(AlertConsts.AGENT_MONITOR_DISK_ERROR, "COLLECT DISK: " + ex.Message, EAlertLevel.ERROR);                
+                AlertHelper.Alert(AlertConsts.AGENT_MONITOR_DISK_ERROR, "COLLECT DISK: " + ex.Message, EAlertLevel.CRITICAL);                
             }
         }
 
@@ -63,7 +63,7 @@ namespace Domain.Service.UseCases
             }
             catch (Exception ex)
             {
-                AlertHelper.Alert(AlertConsts.AGENT_MONITOR_SAVE_DISK_ERROR, "COLLECT DISK: " + ex.Message, EAlertLevel.ERROR);                
+                AlertHelper.Alert(AlertConsts.AGENT_MONITOR_SAVE_DISK_ERROR, "COLLECT DISK: " + ex.Message, EAlertLevel.CRITICAL);                
             }
         }
     }
