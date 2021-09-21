@@ -1,6 +1,7 @@
 ﻿using Domain.Service.DTO;
 using Domain.Service.Entities;
 using Infra;
+using Infra.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,7 +13,7 @@ namespace Domain.Service.UseCases
         private DTOMonitor DTO = null;
         private List<Disk> ListDiskMonitoring = null;
 
-        public DiskMonitor()
+        public DiskMonitor(IAgentParams agentParams) : base (agentParams)
         {            
             ListDiskMonitoring = new List<Disk>();
             DTO = new DTOMonitor();            

@@ -1,5 +1,7 @@
 ﻿using Domain.Service.Entities;
 using System.Collections.Generic;
+using Infra;
+using Infra.Interfaces;
 
 namespace Domain.Service.UseCases
 {
@@ -7,12 +9,13 @@ namespace Domain.Service.UseCases
     {
         protected List<RecoveryItem> ListRecovering = null;
 
-        protected List<MonitorDetail> ListMonitorDetails = null;
+        protected List<MonitorDetail> ListMonitorDetails = null;        
+        
 
-        public WatchDog()
+        public WatchDog(IAgentParams agentParams) : base (agentParams)
         {
-            Params = new AgentParams();
-            Params.Load();
+            agentParams.Load();
+
             this.ListRecovering = new List<RecoveryItem>();
             this.ListMonitorDetails = new List<MonitorDetail>();
         }

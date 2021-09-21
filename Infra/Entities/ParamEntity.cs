@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Infra
+namespace Infra.Entities
 {
     public class ParamEntity : Entity, IComparable
     {

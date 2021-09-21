@@ -62,6 +62,7 @@
     <Compile Include="Entities\ParamEntity.cs" />
     <Compile Include="Entities\ProcessEntity.cs" />
     <Compile Include="Entities\ServiceEntity.cs" />
+    <Compile Include="Interfaces\IAgentParams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -86,5 +87,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

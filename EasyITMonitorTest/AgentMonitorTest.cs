@@ -1,5 +1,6 @@
 ﻿using System;
 using Domain.Service.UseCases;
+using Infra;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EasyITMonitorTest
@@ -7,11 +8,15 @@ namespace EasyITMonitorTest
     [TestClass]
     public class AgentMonitorTest
     {
+        private AgentParams agentParams = new AgentParams();
+
         [TestMethod]
         public void ServiceStart()
         {
-            MonitorService monitorService = new MonitorService();
-            MonitorProcess monitorProcess = new MonitorProcess();
+            
+
+            MonitorService monitorService = new MonitorService(agentParams);
+            MonitorProcess monitorProcess = new MonitorProcess(agentParams);
 
             if (monitorService.Params == null)
                 Assert.Fail("Params not loaded");
@@ -25,7 +30,7 @@ namespace EasyITMonitorTest
         [TestMethod]
         public void MonitorService()
         {
-            MonitorService monitorService = new MonitorService();            
+            MonitorService monitorService = new MonitorService(agentParams);            
 
             monitorService.Monitoring();
 
@@ -34,7 +39,7 @@ namespace EasyITMonitorTest
 
         public void MonitorProcess()
         {
-            MonitorProcess monitorProcess = new MonitorProcess();
+            MonitorProcess monitorProcess = new MonitorProcess(agentParams);
 
             monitorProcess.Monitoring();
 

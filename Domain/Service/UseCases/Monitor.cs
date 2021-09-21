@@ -1,5 +1,7 @@
 ﻿using Domain.Service.DTO;
 using Domain.Service.Entities;
+using Infra;
+using Infra.Interfaces;
 using System.Collections.Generic;
 
 namespace Domain.Service.UseCases
@@ -13,12 +15,12 @@ namespace Domain.Service.UseCases
         private MachineData _MachineData = null;
 
 
-        public Monitor()
+        public Monitor(IAgentParams agentParams) : base(agentParams)
         {
-            Params = new AgentParams();
-            Params.Load();
+            agentParams.Load();
+
             DTO = new DTOMonitor();            
-            _MachineData = new MachineData();
+            _MachineData = new MachineData(agentParams);
             MonitoringItems = new List<MonitorDetail>();            
         }
 

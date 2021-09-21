@@ -1,4 +1,4 @@
-﻿namespace Infra
+﻿namespace Infra.Entities
 {
     public class ProcessEntity : ParamEntity
     {       

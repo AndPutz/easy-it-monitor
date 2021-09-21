@@ -1,13 +1,16 @@
-﻿using System;
+﻿using Infra.Entities;
+using Infra;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.ServiceProcess;
 using System.Xml.Serialization;
+using Infra.Interfaces;
 
 namespace Infra
 {
-    public class AgentParams
+    public class AgentParams : IAgentParams
     {
         public List<ProcessEntity> Processes { get; set; }
 
@@ -58,17 +61,42 @@ namespace Infra
                     }
 
                 }
-                catch
+                catch(Exception)
                 {
                     InitConfig();
                 }
             }
-            catch
+            catch(Exception ex)
             {
                 InitConfig();
             }
 
             
+        }
+
+        public int GetMaxRecoveryAttempts()
+        {
+            return MaxRecoveryAttempts;
+        }
+
+        public List<ServiceEntity> GetServices()
+        {
+            return Services;
+        }
+
+        public List<ProcessEntity> GetProcesses()
+        {
+            return Processes;
+        }
+
+        public int GetTimerProcess()
+        {
+            return TimerProcess;
+        }
+
+        public int GetTimerKeepAlive()
+        {
+            return TimerKeepAlive;
         }
 
         public void Save()

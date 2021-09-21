@@ -1,5 +1,7 @@
 ﻿using Domain.Service.Entities;
 using Infra;
+using Infra.Entities;
+using Infra.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,7 +17,7 @@ namespace Domain.Service.UseCases
         PerformanceCounter MemCounter = null;
         PerformanceCounter CpuUsage = null;
 
-        public MonitorService() : base ()
+        public MonitorService(IAgentParams agentParams) : base(agentParams)
         {
             MemCounter = new PerformanceCounter("Memory", "Available MBytes");
             CpuUsage = new PerformanceCounter("Processor", "% Processor Time", "_Total");
@@ -93,7 +95,7 @@ namespace Domain.Service.UseCases
 
             ServiceController[] ListServices = ServiceController.GetServices();
             
-            foreach (ServiceEntity ServiceItem in Params.Services)
+            foreach (ServiceEntity ServiceItem in Params.GetServices())
             {
                 ServiceController Validation = ListServices.FirstOrDefault(f => f.ServiceName.Equals(ServiceItem.Name) || f.DisplayName.Equals(ServiceItem.Name));
 
@@ -173,12 +175,12 @@ namespace Domain.Service.UseCases
 
         private bool IsServiceConfiguratedToMonitor(ServiceController Service)
         {
-            return Params.Services.Exists(f => f.Name.Equals(Service.DisplayName) || f.Name.Equals(Service.ServiceName));
+            return Params.GetServices().Exists(f => f.Name.Equals(Service.DisplayName) || f.Name.Equals(Service.ServiceName));
         }
 
         private ServiceEntity GetServiceParam(ServiceController Service)
         {
-            return Params.Services.FirstOrDefault(f => f.Name.Equals(Service.DisplayName) || f.Name.Equals(Service.ServiceName));
+            return Params.GetServices().FirstOrDefault(f => f.Name.Equals(Service.DisplayName) || f.Name.Equals(Service.ServiceName));
         }
 
         private float GetCpuFromMachine()

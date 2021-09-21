@@ -8,7 +8,7 @@ using Infra;
 
 namespace Domain.Service.UseCases
 {
-    public class Automation : UseCase
+    public class Automation
     {
         public void DeleteTempFiles()
         {

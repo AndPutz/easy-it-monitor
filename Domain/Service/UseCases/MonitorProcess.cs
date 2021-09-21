@@ -1,15 +1,11 @@
 ﻿using Domain.Service.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Infra.Interfaces;
 
 namespace Domain.Service.UseCases
 {
     public class MonitorProcess : Monitor
     {
-        public MonitorProcess() : base ()
+        public MonitorProcess(IAgentParams agentParams) : base (agentParams)
         {
 
         }

@@ -33,16 +33,16 @@ namespace Agent
 
         protected override void OnStart(string[] args)
         {
-            monitorService = new MonitorService();
-            monitorProcess = new MonitorProcess();
+            monitorService = new MonitorService(new AgentParams());
+            monitorProcess = new MonitorProcess(new AgentParams());
 
-            AlertHelper.Alert(AlertConsts.AGENT_MONITOR_STARTED, "Service is started at " + DateTime.Now + " with TimerProcess on " + monitorService.Params.TimerProcess.ToString() + " ms, Keep Alive Timer on " + monitorService.Params.TimerKeepAlive.ToString() + " ms, Services: " + monitorService.Params.Services.Count.ToString() + " and Processes: " + monitorService.Params.Processes.Count.ToString(), EAlertLevel.OFF);
+            AlertHelper.Alert(AlertConsts.AGENT_MONITOR_STARTED, "Service is started at " + DateTime.Now + " with TimerProcess on " + monitorService.Params.GetTimerProcess().ToString() + " ms, Keep Alive Timer on " + monitorService.Params.GetTimerKeepAlive().ToString() + " ms, Services: " + monitorService.Params.GetServices().Count.ToString() + " and Processes: " + monitorService.Params.GetProcesses().Count.ToString(), EAlertLevel.OFF);
             timerCycle.Elapsed += new ElapsedEventHandler(OnElapsedCycleTime);
-            timerCycle.Interval = monitorService.Params.TimerProcess;
+            timerCycle.Interval = monitorService.Params.GetTimerProcess();
             timerCycle.Enabled = true;
 
             timerKeepAlive.Elapsed += new ElapsedEventHandler(OnElapsedKeepAliveTime);
-            timerKeepAlive.Interval = monitorService.Params.TimerKeepAlive;
+            timerKeepAlive.Interval = monitorService.Params.GetTimerKeepAlive();
             timerKeepAlive.Enabled = true;
         }
 

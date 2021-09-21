@@ -31,16 +31,16 @@ namespace EasyITWatchDog
 
         protected override void OnStart(string[] args)
         {
-            watchDogService = new WatchDogService();
-            watchDogProcess = new WatchDogProcess();
+            watchDogService = new WatchDogService(new AgentParams());
+            watchDogProcess = new WatchDogProcess(new AgentParams());
 
-            AlertHelper.Alert(AlertConsts.AGENT_WATCHDOG_STARTED, "Service is started at " + DateTime.Now + " with TimerProcess on " + watchDogService.Params.TimerProcess.ToString() + " ms, Keep Alive Timer on " + watchDogService.Params.TimerKeepAlive.ToString() + " ms, Services: " + watchDogService.Params.Services.Count.ToString() + " and Processes: " + watchDogService.Params.Processes.Count.ToString(), EAlertLevel.OFF);
+            AlertHelper.Alert(AlertConsts.AGENT_WATCHDOG_STARTED, "Service is started at " + DateTime.Now + " with TimerProcess on " + watchDogService.Params.GetTimerProcess().ToString() + " ms, Keep Alive Timer on " + watchDogService.Params.GetTimerKeepAlive().ToString() + " ms, Services: " + watchDogService.Params.GetServices().Count.ToString() + " and Processes: " + watchDogService.Params.GetProcesses().Count.ToString(), EAlertLevel.OFF);
             timerCycle.Elapsed += new ElapsedEventHandler(OnElapsedCycleTime);
-            timerCycle.Interval = watchDogService.Params.TimerProcess;
+            timerCycle.Interval = watchDogService.Params.GetTimerProcess();
             timerCycle.Enabled = true;
 
             timerKeepAlive.Elapsed += new ElapsedEventHandler(OnElapsedKeepAliveTime);
-            timerKeepAlive.Interval = watchDogService.Params.TimerKeepAlive;
+            timerKeepAlive.Interval = watchDogService.Params.GetTimerKeepAlive();
             timerKeepAlive.Enabled = true;
         }
 

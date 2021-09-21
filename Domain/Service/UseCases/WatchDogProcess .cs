@@ -1,5 +1,6 @@
 ﻿using Domain.Service.Entities;
 using Infra;
+using Infra.Interfaces;
 using System;
 using System.Diagnostics;
 
@@ -8,7 +9,7 @@ namespace Domain.Service.UseCases
     public class WatchDogProcess : WatchDog
     {
 
-        public WatchDogProcess() : base()
+        public WatchDogProcess(IAgentParams agentParams) : base(agentParams)
         {
 
         }
@@ -85,7 +86,7 @@ namespace Domain.Service.UseCases
         /// <returns></returns>
         private bool HasParameters()
         {            
-            if (Params != null && Params.Processes != null && Params.Processes.Count > 0)
+            if (Params != null && Params.GetProcesses() != null && Params.GetProcesses().Count > 0)
                 return true;
             else
             {

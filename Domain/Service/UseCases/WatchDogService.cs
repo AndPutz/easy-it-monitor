@@ -1,10 +1,9 @@
 ﻿using Domain.Service.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Infra;
+using Infra.Entities;
+using Infra.Interfaces;
+using System;
+using System.Linq;
 using System.ServiceProcess;
 
 namespace Domain.Service.UseCases
@@ -12,7 +11,7 @@ namespace Domain.Service.UseCases
     public class WatchDogService : WatchDog
     {
 
-        public WatchDogService() : base ()        
+        public WatchDogService(IAgentParams agentParams) : base(agentParams)        
         {
 
         }
@@ -54,7 +53,7 @@ namespace Domain.Service.UseCases
                 ServiceController[] oListServices = ServiceController.GetServices();
                 foreach (ServiceController ServiceContr in oListServices)
                 {                    
-                    ServiceEntity ServiceToWatch = Params.Services.FirstOrDefault(f => f.Name.Equals(ServiceContr.DisplayName));
+                    ServiceEntity ServiceToWatch = Params.GetServices().FirstOrDefault(f => f.Name.Equals(ServiceContr.DisplayName));
 
                     if (ServiceToWatch == null)
                     {
@@ -88,7 +87,7 @@ namespace Domain.Service.UseCases
         /// <returns></returns>
         private bool HasParameters()
         {            
-            if (Params != null && Params.Services != null && Params.Services.Count > 0)
+            if (Params != null && Params.GetServices() != null && Params.GetServices().Count > 0)
                 return true;
             else
             {
@@ -124,11 +123,11 @@ namespace Domain.Service.UseCases
                         Item.AttempsToRecover++;
                     }
                 }
-                else if (Item.AttempsToRecover >= Params.MaxRecoveryAttempts)
+                else if (Item.AttempsToRecover >= Params.GetMaxRecoveryAttempts())
                 {
                     Item.Status = RecoveryStatus.NotPossible;
 
-                    AlertHelper.Alert("WATCHDOG_SERVICE_NOT_POSSIBLE", "AFTER " + Params.MaxRecoveryAttempts.ToString() + " ATTEMPS WAS NOT POSSIBLE TO START THE " + Item.ServiceItem.DisplayName, EAlertLevel.HIGH);
+                    AlertHelper.Alert("WATCHDOG_SERVICE_NOT_POSSIBLE", "AFTER " + Params.GetMaxRecoveryAttempts().ToString() + " ATTEMPS WAS NOT POSSIBLE TO START THE " + Item.ServiceItem.DisplayName, EAlertLevel.HIGH);
                 }
             }
             else

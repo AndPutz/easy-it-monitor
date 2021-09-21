@@ -1,5 +1,6 @@
 ﻿using System;
 using Domain.Service.UseCases;
+using Infra;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EasyITMonitorTest
@@ -10,8 +11,10 @@ namespace EasyITMonitorTest
         [TestMethod]
         public void ServiceStart()
         {
-            WatchDogService watchDogService = new WatchDogService();
-            WatchDogProcess watchDogProcess = new WatchDogProcess();
+            AgentParams agentParams = new AgentParams();
+
+            WatchDogService watchDogService = new WatchDogService(agentParams);
+            WatchDogProcess watchDogProcess = new WatchDogProcess(agentParams);
 
             if (watchDogService.Params == null)
                 Assert.Fail("Params not loaded");

@@ -1,10 +1,15 @@
 ﻿using Domain.Service.Entities;
+using Infra.Interfaces;
 using System;
 
 namespace Domain.Service.UseCases
 {
     public class MachineData : UseCase
     {
+        public MachineData(IAgentParams agentParams) : base (agentParams)
+        {            
+        }
+
         public Machine CollectData()
         {
             OperatingSystem os = Environment.OSVersion;
