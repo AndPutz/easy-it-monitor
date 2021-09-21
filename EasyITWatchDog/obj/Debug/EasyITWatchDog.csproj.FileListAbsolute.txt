@@ -7,9 +7,10 @@ C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\bin\Debug\Newtonsoft.Jso
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\bin\Debug\Domain.pdb
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\bin\Debug\Infra.pdb
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\bin\Debug\Newtonsoft.Json.xml
-C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\obj\Debug\EasyITWatchDog.csprojAssemblyReference.cache
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\obj\Debug\EasyITWatchDog.ProjectInstaller.resources
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\obj\Debug\EasyITWatchDog.csproj.GenerateResource.cache
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\obj\Debug\EasyITWatchDog.csproj.CopyComplete
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\obj\Debug\EasyITWatchDog.exe
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\obj\Debug\EasyITWatchDog.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\obj\Debug\EasyITWatchDog.csproj.AssemblyReference.cache
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\obj\Debug\EasyITWatchDog.csproj.CoreCompileInputs.cache

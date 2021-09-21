@@ -1,9 +1,6 @@
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\bin\Debug\pt\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
-C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\bin\Debug\pt\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
-C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\bin\Debug\pt\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\bin\Debug\EasyITMonitorTest.dll
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\bin\Debug\EasyITMonitorTest.pdb
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\bin\Debug\Domain.dll
@@ -16,7 +13,8 @@ C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\bin\Debug\Microsoft.V
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\bin\Debug\Infra.pdb
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\bin\Debug\Newtonsoft.Json.xml
-C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\obj\Debug\EasyITMonitorTest.csprojAssemblyReference.cache
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\obj\Debug\EasyITMonitorTest.csproj.CopyComplete
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\obj\Debug\EasyITMonitorTest.dll
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\obj\Debug\EasyITMonitorTest.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\obj\Debug\EasyITMonitorTest.csproj.AssemblyReference.cache
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\obj\Debug\EasyITMonitorTest.csproj.CoreCompileInputs.cache

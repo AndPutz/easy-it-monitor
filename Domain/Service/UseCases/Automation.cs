@@ -56,15 +56,12 @@ namespace Domain.Service.UseCases
             if(string.IsNullOrWhiteSpace(MessageUnauthorizedAccess) == false)
             {
                 AlertHelper.Alert("AGENT_AUTOMATIONIT_CLEANTEMP_UNAUTHORIZED", "FILES NOT AUTHORIZED: " + MessageUnauthorizedAccess, EAlertLevel.MEDIUM);
-            }
-
-            //TODO: CleanTempFolder
-
+            }            
         }
 
         private string DeleteFiles(string[] filesName)
         {
-            //TODO: Convert to Json
+            //TODO: Convert to Json to send it
             string FilesMessageUnauthorizedAccess = "";
 
             foreach (string filePath in filesName)
@@ -100,7 +97,7 @@ namespace Domain.Service.UseCases
                 {
                     Directory.Delete(directory.FullName);
                 }
-                catch (Exception ex)
+                catch
                 {
 
                 }
@@ -110,7 +107,7 @@ namespace Domain.Service.UseCases
             {
                 Directory.Delete(directoryRoot.FullName);
             }
-            catch(Exception ex)
+            catch
             {
 
             }

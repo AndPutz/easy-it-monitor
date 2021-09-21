@@ -38,6 +38,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -53,9 +54,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Access.cs" />
+    <Compile Include="AgentParams.cs" />
     <Compile Include="ApiHelper.cs" />
     <Compile Include="EmailHelper.cs" />
     <Compile Include="AlertHelper.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\ParamEntity.cs" />
+    <Compile Include="Entities\ProcessEntity.cs" />
+    <Compile Include="Entities\ServiceEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
