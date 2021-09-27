@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITMonitorTest", "..\Eas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITWatchDog", "..\EasyITWatchDog\EasyITWatchDog.csproj", "{5A42A762-AA4B-424A-A0DB-65A84D96A333}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyItMonitorWebServer", "..\EasyItMonitorWebServer\EasyItMonitorWebServer.csproj", "{A16F1902-1D74-48CA-B0D5-72EBB21FD684}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5A42A762-AA4B-424A-A0DB-65A84D96A333}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A42A762-AA4B-424A-A0DB-65A84D96A333}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A42A762-AA4B-424A-A0DB-65A84D96A333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A16F1902-1D74-48CA-B0D5-72EBB21FD684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A16F1902-1D74-48CA-B0D5-72EBB21FD684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A16F1902-1D74-48CA-B0D5-72EBB21FD684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A16F1902-1D74-48CA-B0D5-72EBB21FD684}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
