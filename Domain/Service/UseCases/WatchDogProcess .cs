@@ -1,6 +1,5 @@
 ﻿using Domain.Service.Entities;
-using Infra;
-using Infra.Interfaces;
+using Domain.Service.Interfaces;
 using System;
 using System.Diagnostics;
 
@@ -9,9 +8,11 @@ namespace Domain.Service.UseCases
     public class WatchDogProcess : WatchDog
     {
 
-        public WatchDogProcess(IAgentParams agentParams) : base(agentParams)
-        {
+        private IAlert _Alert;
 
+        public WatchDogProcess(IAgentParams agentParams, IAlert alert) : base(agentParams, alert)
+        {
+            _Alert = alert;
         }
 
         /// <summary>
@@ -25,7 +26,7 @@ namespace Domain.Service.UseCases
                 for (int nIdx = 0; nIdx < ListRecovering.Count; nIdx++)
                 {
                     RecoveryItem RecoverItem = ListRecovering[nIdx];
-                    AlertHelper.Alert(AlertConsts.AGENT_WATCHDOG_PROCESS_OFF, "PROCESS " + RecoverItem.ProcessItem.ProcessName + " OFF", EAlertLevel.HIGH);
+                    _Alert.Alert(_Alert.GetAlertTypeForWatchDogProcessOff(), "PROCESS " + RecoverItem.ProcessItem.ProcessName + " OFF", EAlertLevel.HIGH);
 
                     if (Recover(RecoverItem))
                     {

@@ -1,16 +1,18 @@
 ﻿using Domain.Service.Entities;
+using Domain.Service.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Service.DTO
 {
     public class DTOMonitor : DTO
     {
+        public DTOMonitor(IAccess access) : base (access)
+        {
+
+        }
+
         public void SaveMachine(Machine oItem)
         {
             VerifyOpenDB();

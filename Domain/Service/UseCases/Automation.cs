@@ -1,22 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Service.Entities;
+using Domain.Service.Interfaces;
+using System;
 using System.IO;
-using Infra;
+using System.Linq;
 
 namespace Domain.Service.UseCases
 {
     public class Automation
     {
+        private IAlert _Alert;
+
+        public Automation(IAlert alert)
+        {
+            _Alert = alert;
+        }
+
         public void DeleteTempFiles()
         {
             string tempPath = Path.GetTempPath();
             
             double MemorySizeMB = GetFolderSize(tempPath);
 
-            AlertHelper.Alert(AlertConsts.AGENT_AUTOMATION_CLEAN_TEMP_DIR_INFO, MemorySizeMB.ToString() + " MB WILL BE CLEANED IN TEMP FOLDER", EAlertLevel.INFO);
+            _Alert.Alert(_Alert.GetAlertTypeForAutomationItCleanTempDirInfo(), MemorySizeMB.ToString() + " MB WILL BE CLEANED IN TEMP FOLDER", EAlertLevel.INFO);
 
             CleanTempFolder(tempPath);
 
@@ -24,7 +29,7 @@ namespace Domain.Service.UseCases
 
             double SizeDeleted = MemorySizeMB - MemorySizeMBAfter;
 
-            AlertHelper.Alert(AlertConsts.AGENT_AUTOMATION_CLEAN_TEMP_DIR_INFO, "TEMP FOLDER WAS CLEANED - " + SizeDeleted.ToString() + " MB", EAlertLevel.INFO);            
+            _Alert.Alert(_Alert.GetAlertTypeForAutomationItCleanTempDirInfo(), "TEMP FOLDER WAS CLEANED - " + SizeDeleted.ToString() + " MB", EAlertLevel.INFO);            
         }
 
         public void DeleteInternetHistory()
@@ -55,7 +60,7 @@ namespace Domain.Service.UseCases
 
             if(string.IsNullOrWhiteSpace(MessageUnauthorizedAccess) == false)
             {
-                AlertHelper.Alert("AGENT_AUTOMATIONIT_CLEANTEMP_UNAUTHORIZED", "FILES NOT AUTHORIZED: " + MessageUnauthorizedAccess, EAlertLevel.MEDIUM);
+                _Alert.Alert(_Alert.GetAlertTypeForAutomationItCleanTempUnauthorized(), "FILES NOT AUTHORIZED: " + MessageUnauthorizedAccess, EAlertLevel.MEDIUM);
             }            
         }
 

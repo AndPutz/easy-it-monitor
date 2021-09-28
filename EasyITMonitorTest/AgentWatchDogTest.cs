@@ -12,9 +12,10 @@ namespace EasyITMonitorTest
         public void ServiceStart()
         {
             AgentParams agentParams = new AgentParams();
+            AlertHelper alert = new AlertHelper();
 
-            WatchDogService watchDogService = new WatchDogService(agentParams);
-            WatchDogProcess watchDogProcess = new WatchDogProcess(agentParams);
+            WatchDogService watchDogService = new WatchDogService(agentParams, alert);
+            WatchDogProcess watchDogProcess = new WatchDogProcess(agentParams, alert);
 
             if (watchDogService.Params == null)
                 Assert.Fail("Params not loaded");

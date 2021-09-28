@@ -1,12 +1,11 @@
-﻿using Infra.Entities;
-using Infra;
+﻿using Domain.Service.Entities;
+using Domain.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.ServiceProcess;
 using System.Xml.Serialization;
-using Infra.Interfaces;
 
 namespace Infra
 {
@@ -66,7 +65,7 @@ namespace Infra
                     InitConfig();
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 InitConfig();
             }

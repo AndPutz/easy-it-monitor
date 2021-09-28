@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Service.Interfaces;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infra
 {
-    public static class Access
-    {
-        public static string Connection { get; set; } = ConfigurationManager.ConnectionStrings["ConnectionDB"].ToString();
+    public class Access : IAccess
+    {        
+        public string GetConnection(string ConnectionString = "ConnectionDB")
+        {
+            return ConfigurationManager.ConnectionStrings["ConnectionDB"].ToString();
+        }
     }
 }

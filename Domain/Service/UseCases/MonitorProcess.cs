@@ -1,11 +1,11 @@
 ﻿using Domain.Service.Entities;
-using Infra.Interfaces;
+using Domain.Service.Interfaces;
 
 namespace Domain.Service.UseCases
 {
     public class MonitorProcess : Monitor
     {
-        public MonitorProcess(IAgentParams agentParams) : base (agentParams)
+        public MonitorProcess(IAgentParams agentParams, IAccess access) : base (agentParams, access)
         {
 
         }

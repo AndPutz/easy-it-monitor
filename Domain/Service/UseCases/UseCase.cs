@@ -1,5 +1,4 @@
-﻿using Infra;
-using Infra.Interfaces;
+﻿using Domain.Service.Interfaces;
 using System;
 
 namespace Domain.Service.UseCases
@@ -20,11 +19,11 @@ namespace Domain.Service.UseCases
         //TODO: remover after Api implementation
         public Int64 IdMachine { get; set; }
 
-        public IAgentParams Params { get; set; }
+        public IAgentParams Params { get; set; }        
         
         public UseCase(IAgentParams agentParams)
         {
-            Params = agentParams;
+            Params = agentParams;            
         }
     }
 }

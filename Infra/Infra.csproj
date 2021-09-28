@@ -58,11 +58,6 @@
     <Compile Include="ApiHelper.cs" />
     <Compile Include="EmailHelper.cs" />
     <Compile Include="AlertHelper.cs" />
-    <Compile Include="Entities\Entity.cs" />
-    <Compile Include="Entities\ParamEntity.cs" />
-    <Compile Include="Entities\ProcessEntity.cs" />
-    <Compile Include="Entities\ServiceEntity.cs" />
-    <Compile Include="Interfaces\IAgentParams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -87,6 +82,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{f50873f8-5f2e-435b-9bf6-41010a789390}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

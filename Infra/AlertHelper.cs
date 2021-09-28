@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Service.Entities;
+using Domain.Service.Interfaces;
+using System;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infra
 {
-    public static class AlertHelper
-    {
-        public static void Alert(string MessageHead, string Message, EAlertLevel AlertLevel)
+    public class AlertHelper : IAlert
+    {                                                                
+        public void Alert(string MessageHead, string Message, EAlertLevel AlertLevel)
         {
             switch (AlertLevel)
             {
@@ -38,7 +36,87 @@ namespace Infra
             //TODO: Send Alert on Api channel and the web api will query to see the Alert Configs to send as the frequency or period to send it.
         }
 
-        private static void WriteToFile(string Message)
+        public string GetAlertTypeForAgentMonitorStopped()
+        {
+            return "AGENT_MONITOR_STOPPED";
+        }
+
+        public string GetAlertTypeForAgentMonitorKeepAlive()
+        {
+            return "AGENT_MONITOR_KEEPALIVE";
+        }
+
+        public string GetAlertTypeForAgentMonitorStarted()
+        {
+            return "AGENT_MONITOR_STARTED";
+        }
+
+        public string GetAlertTypeForAgentMonitorDiskError()
+        {
+            return "AGENT_MONITOR_DISK_ERROR";
+        }
+
+        public string GetAlertTypeForAgentMonitorSaveDiskError()
+        {
+            return "AGENT_MONITOR_SAVE_DISK_ERROR";
+        }
+
+        public string GetAlertTypeForAgentMonitorServiceDontExist()
+        {
+            return "AGENT_MONITOR_SERVICE_DONT_EXIST";
+        }
+
+        public string GetAlertTypeForWatchDogStopped()
+        {
+            return "AGENT_WATCHDOG_STOPPED";
+        }
+
+        public string GetAlertTypeForWatchDogKeepAlive()
+        {
+            return "AGENT_WATCHDOG_KEEPALIVE";
+        }
+
+        public string GetAlertTypeForWatchDogStarted()
+        {
+            return "AGENT_WATCHDOG_STARTED";
+        }
+
+        public string GetAlertTypeForWatchDogServiceOn()
+        {
+            return "AGENT_WATCHDOG_SERVICE_ON";
+        }
+
+        public string GetAlertTypeForWatchDogServiceOff()
+        {
+            return "AGENT_WATCHDOG_SERVICE_OFF";
+        }
+
+        public string GetAlertTypeForWatchDogProcessOn()
+        {
+            return "AGENT_WATCHDOG_PROCESS_ON";
+        }
+
+        public string GetAlertTypeForWatchDogProcessOff()
+        {
+            return "AGENT_WATCHDOG_PROCESS_OFF";
+        }
+
+        public string GetAlertTypeForAutomationItCleanTempDirInfo()
+        {
+            return "AGENT_AUTOMATIONIT_CLEAN_TEMP_DIR_INFO";
+        }
+
+        public string GetAlertTypeForAutomationItCleanTempUnauthorized()
+        {
+            return "AGENT_AUTOMATIONIT_CLEANTEMP_UNAUTHORIZED";
+        }
+
+        public string GetAlertTypeForWatchDogServiceNotPossible()
+        {
+            return "WATCHDOG_SERVICE_NOT_POSSIBLE";
+        }
+
+        private void WriteToFile(string Message)
         {
             string path = AppDomain.CurrentDomain.BaseDirectory + "\\Logs";
             if (!Directory.Exists(path))
@@ -62,36 +140,5 @@ namespace Infra
                 }
             }
         }
-    }
-
-    public class AlertConsts
-    {
-        public const string AGENT_MONITOR_STOPPED = "AGENT_MONITOR_STOPPED";
-        public const string AGENT_MONITOR_KEEPALIVE = "AGENT_MONITOR_KEEPALIVE";
-        public const string AGENT_MONITOR_STARTED = "AGENT_MONITOR_STARTED";
-        public const string AGENT_MONITOR_DISK_ERROR = "AGENT_MONITOR_DISK_ERROR";
-        public const string AGENT_MONITOR_SAVE_DISK_ERROR = "AGENT_MONITOR_SAVE_DISK_ERROR";
-        public const string AGENT_MONITOR_SERVICE_DONT_EXIST = "AGENT_MONITOR_SERVICE_DONT_EXIST";
-        public const string AGENT_WATCHDOG_STOPPED = "AGENT_WATCHDOG_STOPPED";
-        public const string AGENT_WATCHDOG_KEEPALIVE = "AGENT_WATCHDOG_KEEPALIVE";
-        public const string AGENT_WATCHDOG_STARTED = "AGENT_WATCHDOG_STARTED";
-        public const string AGENT_WATCHDOG_SERVICE_OFF = "AGENT_WATCHDOG_SERVICE_OFF";
-        public const string AGENT_WATCHDOG_SERVICE_ON = "AGENT_WATCHDOG_SERVICE_ON";
-        public const string AGENT_WATCHDOG_PROCESS_OFF = "AGENT_WATCHDOG_PROCESS_OFF";
-        public const string AGENT_WATCHDOG_PROCESS_ON = "AGENT_WATCHDOG_PROCESS_ON";
-        public const string AGENT_AUTOMATION_CLEAN_TEMP_DIR_INFO = "AGENT_AUTOMATION_CLEAN_TEMP_DIR_INFO";
-        public const string AGENT_AUTOMATIONIT_CLEANTEMP_UNAUTHORIZED = "AGENT_AUTOMATIONIT_CLEANTEMP_UNAUTHORIZED";
-    }
-
-    public enum EAlertLevel
-    {
-        OFF,
-        CRITICAL,
-        HIGH,
-        MEDIUM,
-        LOW,
-        INFO
-    }
-
-    
+    }    
 }

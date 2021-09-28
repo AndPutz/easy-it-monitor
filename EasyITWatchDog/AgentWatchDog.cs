@@ -1,4 +1,5 @@
-﻿using Domain.Service.UseCases;
+﻿using Domain.Service.Entities;
+using Domain.Service.UseCases;
 using Infra;
 using System;
 using System.Diagnostics;
@@ -9,10 +10,11 @@ namespace EasyITWatchDog
 {
     public partial class AgentWatchDog : ServiceBase
     {
-        Timer timerCycle = new Timer();
-        Timer timerKeepAlive = new Timer();
-        WatchDogService watchDogService = null;
-        WatchDogProcess watchDogProcess = null;
+        private Timer timerCycle = new Timer();
+        private Timer timerKeepAlive = new Timer();
+        private WatchDogService watchDogService = null;
+        private WatchDogProcess watchDogProcess = null;
+        private AlertHelper alertHelper = null;
 
         public AgentWatchDog()
         {
@@ -27,14 +29,16 @@ namespace EasyITWatchDog
 
             eventLog.Source = SystemInfo.AGENT_WATCHDOG_NAME;
             eventLog.Log = SystemInfo.AGENT_WATCHDOG_NAME + "_Log";
+
+            alertHelper = new AlertHelper();
         }
 
         protected override void OnStart(string[] args)
         {
-            watchDogService = new WatchDogService(new AgentParams());
-            watchDogProcess = new WatchDogProcess(new AgentParams());
+            watchDogService = new WatchDogService(new AgentParams(), alertHelper);
+            watchDogProcess = new WatchDogProcess(new AgentParams(), alertHelper);
 
-            AlertHelper.Alert(AlertConsts.AGENT_WATCHDOG_STARTED, "Service is started at " + DateTime.Now + " with TimerProcess on " + watchDogService.Params.GetTimerProcess().ToString() + " ms, Keep Alive Timer on " + watchDogService.Params.GetTimerKeepAlive().ToString() + " ms, Services: " + watchDogService.Params.GetServices().Count.ToString() + " and Processes: " + watchDogService.Params.GetProcesses().Count.ToString(), EAlertLevel.OFF);
+            alertHelper.Alert(alertHelper.GetAlertTypeForWatchDogStarted(), "Service is started at " + DateTime.Now + " with TimerProcess on " + watchDogService.Params.GetTimerProcess().ToString() + " ms, Keep Alive Timer on " + watchDogService.Params.GetTimerKeepAlive().ToString() + " ms, Services: " + watchDogService.Params.GetServices().Count.ToString() + " and Processes: " + watchDogService.Params.GetProcesses().Count.ToString(), EAlertLevel.OFF);
             timerCycle.Elapsed += new ElapsedEventHandler(OnElapsedCycleTime);
             timerCycle.Interval = watchDogService.Params.GetTimerProcess();
             timerCycle.Enabled = true;
@@ -46,12 +50,12 @@ namespace EasyITWatchDog
 
         private void OnElapsedKeepAliveTime(object sender, ElapsedEventArgs e)
         {
-            AlertHelper.Alert(AlertConsts.AGENT_WATCHDOG_KEEPALIVE, "Keep Alive at " + DateTime.Now, EAlertLevel.OFF);
+            alertHelper.Alert(alertHelper.GetAlertTypeForWatchDogKeepAlive(), "Keep Alive at " + DateTime.Now, EAlertLevel.OFF);
         }
 
         protected override void OnStop()
         {
-            AlertHelper.Alert(AlertConsts.AGENT_WATCHDOG_STOPPED, "Service is stopped at " + DateTime.Now, EAlertLevel.OFF);
+            alertHelper.Alert(alertHelper.GetAlertTypeForWatchDogStopped(), "Service is stopped at " + DateTime.Now, EAlertLevel.OFF);
         }
 
         private void OnElapsedCycleTime(object source, ElapsedEventArgs e)

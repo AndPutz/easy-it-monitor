@@ -1,5 +1,5 @@
 ﻿using Domain.Service.Entities;
-using Infra.Interfaces;
+using Domain.Service.Interfaces;
 using System;
 
 namespace Domain.Service.UseCases

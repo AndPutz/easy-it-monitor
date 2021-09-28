@@ -1,5 +1,6 @@
 ﻿using System;
 using Domain.Service.UseCases;
+using Infra;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EasyITMonitorTest
@@ -10,7 +11,8 @@ namespace EasyITMonitorTest
         [TestMethod]
         public void DeleteTempFiles()
         {
-            Automation automation = new Automation();
+            AlertHelper alertHelper = new AlertHelper();
+            Automation automation = new Automation(alertHelper);
             automation.DeleteTempFiles();
 
             Assert.IsTrue(true);

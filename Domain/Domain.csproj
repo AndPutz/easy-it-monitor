@@ -47,10 +47,17 @@
     <Compile Include="Service\DTO\DTO.cs" />
     <Compile Include="Service\DTO\DTOMonitor.cs" />
     <Compile Include="Service\Entities\Disk.cs" />
+    <Compile Include="Service\Entities\EAlertLevel.cs" />
     <Compile Include="Service\Entities\Entity.cs" />
     <Compile Include="Service\Entities\Machine.cs" />
     <Compile Include="Service\Entities\MonitorDetail.cs" />
+    <Compile Include="Service\Entities\ParamEntity.cs" />
+    <Compile Include="Service\Entities\ProcessEntity.cs" />
     <Compile Include="Service\Entities\RecoveryItem.cs" />
+    <Compile Include="Service\Entities\ServiceEntity.cs" />
+    <Compile Include="Service\Interfaces\IAccess.cs" />
+    <Compile Include="Service\Interfaces\IAgentParams.cs" />
+    <Compile Include="Service\Interfaces\IAlert.cs" />
     <Compile Include="Service\UseCases\Automation.cs" />
     <Compile Include="Service\UseCases\DiskMonitor.cs" />
     <Compile Include="Service\UseCases\MachineData.cs" />
@@ -63,11 +70,5 @@
     <Compile Include="Service\UseCases\WatchDogService.cs" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\Infra\Infra.csproj">
-      <Project>{78D2F09A-9449-477A-9C82-C312E719E1C2}</Project>
-      <Name>Infra</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

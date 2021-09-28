@@ -1,7 +1,5 @@
 ﻿using Domain.Service.Entities;
-using Infra;
-using Infra.Entities;
-using Infra.Interfaces;
+using Domain.Service.Interfaces;
 using System;
 using System.Linq;
 using System.ServiceProcess;
@@ -11,7 +9,7 @@ namespace Domain.Service.UseCases
     public class WatchDogService : WatchDog
     {
 
-        public WatchDogService(IAgentParams agentParams) : base(agentParams)        
+        public WatchDogService(IAgentParams agentParams, IAlert alert) : base(agentParams, alert)
         {
 
         }
@@ -27,7 +25,8 @@ namespace Domain.Service.UseCases
                 for (int nIdx = 0; nIdx < ListRecovering.Count; nIdx++)
                 {
                     RecoveryItem RecoverItem = ListRecovering[nIdx];
-                    AlertHelper.Alert(AlertConsts.AGENT_WATCHDOG_SERVICE_OFF, "SERVICE " + RecoverItem.ServiceItem.DisplayName + " OFF", EAlertLevel.HIGH);
+                    
+                    _alert.Alert(_alert.GetAlertTypeForWatchDogServiceOff(), "SERVICE " + RecoverItem.ServiceItem.DisplayName + " OFF", EAlertLevel.HIGH);
 
                     if (Recover(RecoverItem))
                     {
@@ -127,7 +126,7 @@ namespace Domain.Service.UseCases
                 {
                     Item.Status = RecoveryStatus.NotPossible;
 
-                    AlertHelper.Alert("WATCHDOG_SERVICE_NOT_POSSIBLE", "AFTER " + Params.GetMaxRecoveryAttempts().ToString() + " ATTEMPS WAS NOT POSSIBLE TO START THE " + Item.ServiceItem.DisplayName, EAlertLevel.HIGH);
+                    _alert.Alert(_alert.GetAlertTypeForWatchDogServiceNotPossible(), "AFTER " + Params.GetMaxRecoveryAttempts().ToString() + " ATTEMPS WAS NOT POSSIBLE TO START THE " + Item.ServiceItem.DisplayName, EAlertLevel.HIGH);
                 }
             }
             else
@@ -149,7 +148,7 @@ namespace Domain.Service.UseCases
             {
                 Item.Status = RecoveryStatus.Running;
 
-                AlertHelper.Alert(AlertConsts.AGENT_WATCHDOG_SERVICE_ON, Item.ServiceItem.DisplayName + " ON", EAlertLevel.INFO);                
+                _alert.Alert(_alert.GetAlertTypeForWatchDogServiceOn(), Item.ServiceItem.DisplayName + " ON", EAlertLevel.INFO);                
             }
         }
     }

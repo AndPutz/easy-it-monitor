@@ -1,7 +1,6 @@
 ﻿using Domain.Service.DTO;
 using Domain.Service.Entities;
-using Infra;
-using Infra.Interfaces;
+using Domain.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,10 +12,13 @@ namespace Domain.Service.UseCases
         private DTOMonitor DTO = null;
         private List<Disk> ListDiskMonitoring = null;
 
-        public DiskMonitor(IAgentParams agentParams) : base (agentParams)
+        private IAlert _Alert;
+
+        public DiskMonitor(IAgentParams agentParams, IAccess access, IAlert alert) : base (agentParams)
         {            
             ListDiskMonitoring = new List<Disk>();
-            DTO = new DTOMonitor();            
+            DTO = new DTOMonitor(access);
+            _Alert = alert;
         }
 
         /// <summary>
@@ -49,7 +51,7 @@ namespace Domain.Service.UseCases
             }
             catch (Exception ex)
             {
-                AlertHelper.Alert(AlertConsts.AGENT_MONITOR_DISK_ERROR, "COLLECT DISK: " + ex.Message, EAlertLevel.CRITICAL);                
+                _Alert.Alert(_Alert.GetAlertTypeForAgentMonitorDiskError(), "COLLECT DISK: " + ex.Message, EAlertLevel.CRITICAL);
             }
         }
 
@@ -64,7 +66,7 @@ namespace Domain.Service.UseCases
             }
             catch (Exception ex)
             {
-                AlertHelper.Alert(AlertConsts.AGENT_MONITOR_SAVE_DISK_ERROR, "COLLECT DISK: " + ex.Message, EAlertLevel.CRITICAL);                
+                _Alert.Alert(_Alert.GetAlertTypeForAgentMonitorSaveDiskError(), "COLLECT DISK: " + ex.Message, EAlertLevel.CRITICAL);                
             }
         }
     }

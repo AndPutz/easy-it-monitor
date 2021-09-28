@@ -1,7 +1,5 @@
 ﻿using Domain.Service.Entities;
-using Infra;
-using Infra.Entities;
-using Infra.Interfaces;
+using Domain.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,13 +12,16 @@ namespace Domain.Service.UseCases
 {
     public class MonitorService : Monitor
     {
-        PerformanceCounter MemCounter = null;
-        PerformanceCounter CpuUsage = null;
+        private PerformanceCounter MemCounter = null;
+        private PerformanceCounter CpuUsage = null;
 
-        public MonitorService(IAgentParams agentParams) : base(agentParams)
+        private IAlert _Alert;
+
+        public MonitorService(IAgentParams agentParams, IAlert alert, IAccess access) : base(agentParams, access)
         {
             MemCounter = new PerformanceCounter("Memory", "Available MBytes");
             CpuUsage = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+            _Alert = alert;
         }
 
         public override void Save()
@@ -80,7 +81,7 @@ namespace Domain.Service.UseCases
 
                 ErrorMessage = ErrorMessage.Substring(0, ErrorMessage.Length - 1);
 
-                AlertHelper.Alert(AlertConsts.AGENT_MONITOR_SERVICE_DONT_EXIST, "SERVICES: " + ErrorMessage + " DONT EXISTS", EAlertLevel.HIGH);                
+                _Alert.Alert(_Alert.GetAlertTypeForAgentMonitorServiceDontExist(), "SERVICES: " + ErrorMessage + " DONT EXISTS", EAlertLevel.HIGH);                
             }
         }
 
