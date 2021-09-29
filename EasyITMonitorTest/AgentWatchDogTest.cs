@@ -8,15 +8,23 @@ namespace EasyITMonitorTest
     [TestClass]
     public class AgentWatchDogTest
     {
+        private AgentParams agentParams = null;
+        private AlertHelper alert = null;
+        private WatchDogService watchDogService = null;
+        private WatchDogProcess watchDogProcess = null;
+
+        public AgentWatchDogTest()
+        {
+            agentParams = new AgentParams();
+            alert = new AlertHelper();
+
+            watchDogService = new WatchDogService(agentParams, alert);
+            watchDogProcess = new WatchDogProcess(agentParams, alert);
+        }
+
         [TestMethod]
         public void ServiceStart()
-        {
-            AgentParams agentParams = new AgentParams();
-            AlertHelper alert = new AlertHelper();
-
-            WatchDogService watchDogService = new WatchDogService(agentParams, alert);
-            WatchDogProcess watchDogProcess = new WatchDogProcess(agentParams, alert);
-
+        {                        
             if (watchDogService.Params == null)
                 Assert.Fail("Params not loaded");
 
@@ -25,5 +33,15 @@ namespace EasyITMonitorTest
 
             Assert.IsTrue(true);
         }
+
+        [TestMethod]
+        public void WatchDogMonitoring()
+        {
+            watchDogService.Monitoring();
+
+            watchDogProcess.Monitoring();
+
+            Assert.IsTrue(true);
+        }       
     }
 }

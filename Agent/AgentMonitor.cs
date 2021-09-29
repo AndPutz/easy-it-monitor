@@ -63,7 +63,9 @@ namespace Agent
 
         private void OnElapsedCycleTime(object source, ElapsedEventArgs e)
         {
-            
+            monitorService.Monitoring();
+
+            monitorProcess.Monitoring();
         }
 
         

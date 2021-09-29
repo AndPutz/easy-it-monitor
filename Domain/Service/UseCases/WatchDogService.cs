@@ -37,8 +37,7 @@ namespace Domain.Service.UseCases
                     {
                         RecoverItem.ServiceItem.Dispose();
                         ListRecovering.RemoveAt(nIdx);
-                    }
-                    //else = Monitoring 
+                    } 
                 }
             }
 

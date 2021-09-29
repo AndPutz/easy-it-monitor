@@ -60,7 +60,9 @@ namespace EasyITWatchDog
 
         private void OnElapsedCycleTime(object source, ElapsedEventArgs e)
         {
+            watchDogService.Monitoring();
 
+            watchDogProcess.Monitoring();
         }
     }
 }

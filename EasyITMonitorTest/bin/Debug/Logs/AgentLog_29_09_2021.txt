@@ -1,0 +1,5 @@
+HIGH: SERVICE ASP.NET State Service OFF
+HIGH: SERVICE ASP.NET State Service OFF
+INFO: ASP.NET State Service ON
+HIGH: SERVICE OpcEnum OFF
+INFO: OpcEnum ON
