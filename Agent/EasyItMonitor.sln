@@ -3,17 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITMonitorAgent", "EasyITMonitorAgent.csproj", "{85C767AE-2EF0-4AC4-9C51-693BAFB11161}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITMonitor.ApplicationAgent", "EasyITMonitor.ApplicationAgent.csproj", "{85C767AE-2EF0-4AC4-9C51-693BAFB11161}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "..\Infra\Infra.csproj", "{78D2F09A-9449-477A-9C82-C312E719E1C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITMonitor.Infra", "..\Infra\EasyITMonitor.Infra.csproj", "{78D2F09A-9449-477A-9C82-C312E719E1C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "..\Domain\Domain.csproj", "{F50873F8-5F2E-435B-9BF6-41010A789390}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITMonitor.Domain", "..\Domain\EasyITMonitor.Domain.csproj", "{F50873F8-5F2E-435B-9BF6-41010A789390}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITMonitorTest", "..\EasyITMonitorTest\EasyITMonitorTest.csproj", "{9A81159A-8012-40CF-AA5A-666B9987FE29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITWatchDog", "..\EasyITWatchDog\EasyITWatchDog.csproj", "{5A42A762-AA4B-424A-A0DB-65A84D96A333}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITMonitor.ApplicationWatchDog", "..\EasyITWatchDog\EasyITMonitor.ApplicationWatchDog.csproj", "{5A42A762-AA4B-424A-A0DB-65A84D96A333}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyItMonitorWebServer", "..\EasyItMonitorWebServer\EasyItMonitorWebServer.csproj", "{A16F1902-1D74-48CA-B0D5-72EBB21FD684}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyITMonitor.WebUI", "..\EasyITMonitorWebServer\EasyITMonitor.WebUI.csproj", "{A1544258-A7D8-419F-921C-C282BEAEDA02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITMonitor.Infra.Data", "..\EasyITMonitor.Infra.Data\EasyITMonitor.Infra.Data.csproj", "{D2019175-8C3F-49DB-8431-594549BC920B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITMonitor.Infra.IoC", "..\EasyITMonitor.Infra.Ioc\EasyITMonitor.Infra.IoC.csproj", "{D0195936-895B-4593-A141-87302A626183}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITMonitor.Application", "..\EasyITMonitor.Application\EasyITMonitor.Application.csproj", "{0FFA3C07-D80E-4358-88B3-2DF8A9805D3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +47,22 @@ Global
 		{5A42A762-AA4B-424A-A0DB-65A84D96A333}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A42A762-AA4B-424A-A0DB-65A84D96A333}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A42A762-AA4B-424A-A0DB-65A84D96A333}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A16F1902-1D74-48CA-B0D5-72EBB21FD684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A16F1902-1D74-48CA-B0D5-72EBB21FD684}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A16F1902-1D74-48CA-B0D5-72EBB21FD684}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A16F1902-1D74-48CA-B0D5-72EBB21FD684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1544258-A7D8-419F-921C-C282BEAEDA02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1544258-A7D8-419F-921C-C282BEAEDA02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1544258-A7D8-419F-921C-C282BEAEDA02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1544258-A7D8-419F-921C-C282BEAEDA02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2019175-8C3F-49DB-8431-594549BC920B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2019175-8C3F-49DB-8431-594549BC920B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2019175-8C3F-49DB-8431-594549BC920B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2019175-8C3F-49DB-8431-594549BC920B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0195936-895B-4593-A141-87302A626183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0195936-895B-4593-A141-87302A626183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0195936-895B-4593-A141-87302A626183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0195936-895B-4593-A141-87302A626183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FFA3C07-D80E-4358-88B3-2DF8A9805D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FFA3C07-D80E-4358-88B3-2DF8A9805D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FFA3C07-D80E-4358-88B3-2DF8A9805D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FFA3C07-D80E-4358-88B3-2DF8A9805D3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

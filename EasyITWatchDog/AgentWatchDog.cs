@@ -1,5 +1,5 @@
-﻿using Domain.Service.Entities;
-using Domain.Service.UseCases;
+﻿using Domain.Entities;
+using Domain.UseCases;
 using Infra;
 using System;
 using System.Diagnostics;

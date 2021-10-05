@@ -1,0 +1,5 @@
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Application\bin\Debug\EasyITMonitor.Application.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Application\bin\Debug\EasyITMonitor.Application.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Application\obj\Debug\EasyITMonitor.Application.csproj.CoreCompileInputs.cache
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Application\obj\Debug\EasyITMonitor.Application.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Application\obj\Debug\EasyITMonitor.Application.pdb

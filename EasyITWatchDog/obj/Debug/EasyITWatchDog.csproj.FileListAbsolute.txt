@@ -13,3 +13,4 @@ C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\obj\Debug\EasyITWatchDog
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\obj\Debug\EasyITWatchDog.csproj.CopyComplete
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\obj\Debug\EasyITWatchDog.exe
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\obj\Debug\EasyITWatchDog.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITWatchDog\obj\Debug\EasyITWatchDog.csproj.AssemblyReference.cache

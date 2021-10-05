@@ -1,4 +1,4 @@
-﻿using Domain.Service.Interfaces;
+﻿using Domain.Interfaces;
 using System.Configuration;
 
 namespace Infra

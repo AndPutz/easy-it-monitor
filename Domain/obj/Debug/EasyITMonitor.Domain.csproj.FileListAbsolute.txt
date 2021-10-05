@@ -1,0 +1,6 @@
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Domain\bin\Debug\Domain.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Domain\bin\Debug\Domain.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Domain\obj\Debug\EasyITMonitor.Domain.csproj.AssemblyReference.cache
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Domain\obj\Debug\EasyITMonitor.Domain.csproj.CoreCompileInputs.cache
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Domain\obj\Debug\Domain.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Domain\obj\Debug\Domain.pdb

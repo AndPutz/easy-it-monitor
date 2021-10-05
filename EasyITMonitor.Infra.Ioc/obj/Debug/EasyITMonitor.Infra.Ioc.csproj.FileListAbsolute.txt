@@ -1,0 +1,6 @@
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Ioc\bin\Debug\EasyITMonitor.Infra.Ioc.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Ioc\bin\Debug\EasyITMonitor.Infra.Ioc.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Ioc\obj\Debug\EasyITMonitor.Infra.Ioc.csproj.AssemblyReference.cache
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Ioc\obj\Debug\EasyITMonitor.Infra.Ioc.csproj.CoreCompileInputs.cache
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Ioc\obj\Debug\EasyITMonitor.Infra.Ioc.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Ioc\obj\Debug\EasyITMonitor.Infra.Ioc.pdb

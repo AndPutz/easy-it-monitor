@@ -1,0 +1,16 @@
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\obj\Debug\EasyITMonitor.ApplicationAgent.csproj.AssemblyReference.cache
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\obj\Debug\Agent.AgentInstaller.resources
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\obj\Debug\EasyITMonitor.ApplicationAgent.csproj.GenerateResource.cache
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\obj\Debug\EasyITMonitor.ApplicationAgent.csproj.CoreCompileInputs.cache
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\obj\Debug\EasyITMonitorAgent.exe
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\obj\Debug\EasyITMonitorAgent.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\EasyITMonitorAgent.exe.config
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\EasyITMonitorAgent.exe
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\EasyITMonitorAgent.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\Domain.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\Infra.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\Newtonsoft.Json.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\Domain.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\Infra.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\bin\Debug\Newtonsoft.Json.xml
+C:\Pessoal\EasyITMonitor\easy-it-monitor\Agent\obj\Debug\EasyITMonitor.ApplicationAgent.csproj.CopyComplete

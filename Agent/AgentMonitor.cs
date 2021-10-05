@@ -3,8 +3,8 @@ using System;
 using System.Diagnostics;
 using System.ServiceProcess;
 using System.Timers;
-using Domain.Service.UseCases;
-using Domain.Service.Entities;
+using Domain.UseCases;
+using Domain.Entities;
 
 
 namespace Agent

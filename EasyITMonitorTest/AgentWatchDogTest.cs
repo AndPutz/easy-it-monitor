@@ -1,5 +1,5 @@
 ﻿using System;
-using Domain.Service.UseCases;
+using Domain.UseCases;
 using Infra;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

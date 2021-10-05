@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyItMonitorWebServer\\EasyItMonitorWebServer.csproj": {}
+    "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitorWebServer\\EasyITMonitorWebServer.csproj": {}
   },
   "projects": {
-    "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyItMonitorWebServer\\EasyItMonitorWebServer.csproj": {
+    "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitorWebServer\\EasyITMonitorWebServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyItMonitorWebServer\\EasyItMonitorWebServer.csproj",
-        "projectName": "EasyItMonitorWebServer",
-        "projectPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyItMonitorWebServer\\EasyItMonitorWebServer.csproj",
+        "projectUniqueName": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitorWebServer\\EasyITMonitorWebServer.csproj",
+        "projectName": "EasyITMonitorWebServer",
+        "projectPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitorWebServer\\EasyITMonitorWebServer.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyItMonitorWebServer\\obj\\",
+        "outputPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitorWebServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -23,7 +23,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
@@ -31,8 +31,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -43,12 +43,32 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
-              "version": "[3.1.18, )"
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.10, )"
             }
           },
           "imports": [

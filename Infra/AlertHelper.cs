@@ -1,5 +1,5 @@
-﻿using Domain.Service.Entities;
-using Domain.Service.Interfaces;
+﻿using Domain.Entities;
+using Domain.Interfaces;
 using System;
 using System.IO;
 

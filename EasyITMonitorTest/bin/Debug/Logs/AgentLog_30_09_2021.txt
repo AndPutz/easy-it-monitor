@@ -1,0 +1,1 @@
+HIGH: SERVICE SQL Server Analysis Services (MSSQLSERVER) OFF
