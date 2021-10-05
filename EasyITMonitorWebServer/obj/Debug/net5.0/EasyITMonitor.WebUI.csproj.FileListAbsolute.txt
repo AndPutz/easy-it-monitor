@@ -391,3 +391,12 @@ C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorWebServer\obj\Debug\net5.0
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorWebServer\obj\Debug\net5.0\ref\EasyITMonitor.WebUI.dll
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorWebServer\obj\Debug\net5.0\EasyITMonitor.WebUI.pdb
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorWebServer\obj\Debug\net5.0\EasyITMonitor.WebUI.genruntimeconfig.cache
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorWebServer\bin\Debug\net5.0\Domain.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorWebServer\bin\Debug\net5.0\EasyITMonitor.Application.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorWebServer\bin\Debug\net5.0\EasyITMonitor.Infra.Data.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorWebServer\bin\Debug\net5.0\EasyITMonitor.Infra.Ioc.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorWebServer\bin\Debug\net5.0\EasyITMonitor.Infra.Ioc.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorWebServer\bin\Debug\net5.0\EasyITMonitor.Application.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorWebServer\bin\Debug\net5.0\Domain.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorWebServer\bin\Debug\net5.0\EasyITMonitor.Infra.Data.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorWebServer\obj\Debug\net5.0\EasyITMonitor.WebUI.csproj.AssemblyReference.cache

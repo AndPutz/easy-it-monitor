@@ -1857,6 +1857,53 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "EasyITMonitor.Application/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "EasyITMonitor.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EasyITMonitor.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EasyITMonitor.Application.dll": {}
+        }
+      },
+      "EasyITMonitor.Domain/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/EasyITMonitor.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EasyITMonitor.Domain.dll": {}
+        }
+      },
+      "EasyITMonitor.Infra.Data/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "EasyITMonitor.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EasyITMonitor.Infra.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EasyITMonitor.Infra.Data.dll": {}
+        }
+      },
+      "EasyITMonitor.Infra.IoC/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "EasyITMonitor.Application": "1.0.0",
+          "EasyITMonitor.Domain": "1.0.0",
+          "EasyITMonitor.Infra.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EasyITMonitor.Infra.IoC.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EasyITMonitor.Infra.IoC.dll": {}
+        }
       }
     }
   },
@@ -6707,10 +6754,31 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "EasyITMonitor.Application/1.0.0": {
+      "type": "project",
+      "path": "../EasyITMonitor.Application/EasyITMonitor.Application.csproj",
+      "msbuildProject": "../EasyITMonitor.Application/EasyITMonitor.Application.csproj"
+    },
+    "EasyITMonitor.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/EasyITMonitor.Domain.csproj",
+      "msbuildProject": "../Domain/EasyITMonitor.Domain.csproj"
+    },
+    "EasyITMonitor.Infra.Data/1.0.0": {
+      "type": "project",
+      "path": "../EasyITMonitor.Infra.Data/EasyITMonitor.Infra.Data.csproj",
+      "msbuildProject": "../EasyITMonitor.Infra.Data/EasyITMonitor.Infra.Data.csproj"
+    },
+    "EasyITMonitor.Infra.IoC/1.0.0": {
+      "type": "project",
+      "path": "../EasyITMonitor.Infra.Ioc/EasyITMonitor.Infra.IoC.csproj",
+      "msbuildProject": "../EasyITMonitor.Infra.Ioc/EasyITMonitor.Infra.IoC.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "EasyITMonitor.Infra.IoC >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.10",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.10",
       "Microsoft.AspNetCore.Identity.UI >= 5.0.10",
@@ -6752,7 +6820,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Infra.Ioc\\EasyITMonitor.Infra.IoC.csproj": {
+              "projectPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Infra.Ioc\\EasyITMonitor.Infra.IoC.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

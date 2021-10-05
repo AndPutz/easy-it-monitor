@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Domain.UseCases
 {
-    public class Automation
+    public sealed class Automation
     {
         private IAlert _Alert;
 

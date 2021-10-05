@@ -2,7 +2,7 @@
 
 namespace Domain.Entities
 {
-    public class MonitorDetail : Entity
+    public sealed class MonitorDetail : Entity
     {
         public Int64 IdWatchDogItem { get; set; }
         public string Name { get; set; }

@@ -10,7 +10,7 @@ using System.Threading;
 
 namespace Domain.UseCases
 {
-    public class MonitorService : Monitor
+    public sealed class MonitorService : Monitor
     {
         private PerformanceCounter MemCounter = null;
         private PerformanceCounter CpuUsage = null;

@@ -4,6 +4,79 @@
     "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitorWebServer\\EasyITMonitor.WebUI.csproj": {}
   },
   "projects": {
+    "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\Domain\\EasyITMonitor.Domain.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\Domain\\EasyITMonitor.Domain.csproj",
+        "projectName": "EasyITMonitor.Domain",
+        "projectPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\Domain\\EasyITMonitor.Domain.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Application\\EasyITMonitor.Application.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Application\\EasyITMonitor.Application.csproj",
+        "projectName": "EasyITMonitor.Application",
+        "projectPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Application\\EasyITMonitor.Application.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\Domain\\EasyITMonitor.Domain.csproj": {
+                "projectPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\Domain\\EasyITMonitor.Domain.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Infra.Data\\EasyITMonitor.Infra.Data.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Infra.Data\\EasyITMonitor.Infra.Data.csproj",
+        "projectName": "EasyITMonitor.Infra.Data",
+        "projectPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Infra.Data\\EasyITMonitor.Infra.Data.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\Domain\\EasyITMonitor.Domain.csproj": {
+                "projectPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\Domain\\EasyITMonitor.Domain.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Infra.Ioc\\EasyITMonitor.Infra.IoC.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Infra.Ioc\\EasyITMonitor.Infra.IoC.csproj",
+        "projectName": "EasyITMonitor.Infra.IoC",
+        "projectPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Infra.Ioc\\EasyITMonitor.Infra.IoC.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\Domain\\EasyITMonitor.Domain.csproj": {
+                "projectPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\Domain\\EasyITMonitor.Domain.csproj"
+              },
+              "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Application\\EasyITMonitor.Application.csproj": {
+                "projectPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Application\\EasyITMonitor.Application.csproj"
+              },
+              "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Infra.Data\\EasyITMonitor.Infra.Data.csproj": {
+                "projectPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Infra.Data\\EasyITMonitor.Infra.Data.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitorWebServer\\EasyITMonitor.WebUI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -33,7 +106,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Infra.Ioc\\EasyITMonitor.Infra.IoC.csproj": {
+                "projectPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Infra.Ioc\\EasyITMonitor.Infra.IoC.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

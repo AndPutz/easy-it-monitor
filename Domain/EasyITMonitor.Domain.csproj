@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\CategoryEntity.cs" />
+    <Compile Include="Entities\CategoryMachines.cs" />
+    <Compile Include="Entities\CategoryProcesses.cs" />
+    <Compile Include="Entities\CategoryServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DTO\DTO.cs" />
     <Compile Include="DTO\DTOMonitor.cs" />
@@ -68,6 +72,7 @@
     <Compile Include="UseCases\WatchDog.cs" />
     <Compile Include="UseCases\WatchDogProcess .cs" />
     <Compile Include="UseCases\WatchDogService.cs" />
+    <Compile Include="Validation\DomainExceptionValidation.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -66,5 +66,11 @@
   <ItemGroup>
     <Folder Include="Exceptions\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\EasyITMonitor.Domain.csproj">
+      <Project>{f50873f8-5f2e-435b-9bf6-41010a789390}</Project>
+      <Name>EasyITMonitor.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -44,5 +44,19 @@
     <Compile Include="DependencyInjection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\EasyITMonitor.Domain.csproj">
+      <Project>{f50873f8-5f2e-435b-9bf6-41010a789390}</Project>
+      <Name>EasyITMonitor.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EasyITMonitor.Application\EasyITMonitor.Application.csproj">
+      <Project>{0ffa3c07-d80e-4358-88b3-2df8a9805d3c}</Project>
+      <Name>EasyITMonitor.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EasyITMonitor.Infra.Data\EasyITMonitor.Infra.Data.csproj">
+      <Project>{d2019175-8c3f-49db-8431-594549bc920b}</Project>
+      <Name>EasyITMonitor.Infra.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

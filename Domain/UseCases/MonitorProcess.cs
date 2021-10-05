@@ -3,7 +3,7 @@ using Domain.Interfaces;
 
 namespace Domain.UseCases
 {
-    public class MonitorProcess : Monitor
+    public sealed class MonitorProcess : Monitor
     {
         public MonitorProcess(IAgentParams agentParams, IAccess access) : base (agentParams, access)
         {

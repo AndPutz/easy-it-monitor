@@ -15,4 +15,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EasyITMonitor.Infra.Ioc\EasyITMonitor.Infra.IoC.csproj" />
+  </ItemGroup>
+
 </Project>

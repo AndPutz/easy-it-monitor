@@ -2,7 +2,7 @@
 
 namespace Domain.Entities
 {
-    public class Disk : Entity
+    public sealed class Disk : Entity
     {
         public Int64 IdWatchDogItem { get; set; }
         public string Drive { get; set; }

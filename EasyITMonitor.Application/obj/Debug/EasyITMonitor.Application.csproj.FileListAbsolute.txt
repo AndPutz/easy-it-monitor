@@ -3,3 +3,7 @@ C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Application\bin\Debug\Eas
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Application\obj\Debug\EasyITMonitor.Application.csproj.CoreCompileInputs.cache
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Application\obj\Debug\EasyITMonitor.Application.dll
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Application\obj\Debug\EasyITMonitor.Application.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Application\bin\Debug\Domain.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Application\bin\Debug\Domain.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Application\obj\Debug\EasyITMonitor.Application.csproj.AssemblyReference.cache
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Application\obj\Debug\EasyITMonitor.Application.csproj.CopyComplete

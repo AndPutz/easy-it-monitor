@@ -3,7 +3,7 @@ using System.ServiceProcess;
 
 namespace Domain.Entities
 {
-    public class RecoveryItem : Entity
+    public sealed class RecoveryItem : Entity
     {
         public string Name { get; set; }
         public RecoveryType RecoverType { get; set; }

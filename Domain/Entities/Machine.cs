@@ -2,7 +2,7 @@
 
 namespace Domain.Entities
 {
-    public class Machine : Entity
+    public sealed class Machine : Entity
     {
         public Int64 Id { get; set; }
         public string MachineName { get; set; }
@@ -10,5 +10,9 @@ namespace Domain.Entities
         public string Version { get; set; }
         public string ServicePack { get; set; }
         public int ProcessorCount { get; set; }
+
+        public int CategoryMachinesId { get; set; }
+
+        public CategoryMachines Category { get; set; }
     }
 }

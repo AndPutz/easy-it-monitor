@@ -4,7 +4,7 @@ using System;
 
 namespace Domain.UseCases
 {
-    public class MachineData : UseCase
+    public sealed class MachineData : UseCase
     {
         public MachineData(IAgentParams agentParams) : base (agentParams)
         {            

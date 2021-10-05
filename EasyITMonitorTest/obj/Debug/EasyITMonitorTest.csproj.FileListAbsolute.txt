@@ -18,3 +18,4 @@ C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\bin\Debug\Newtonsoft.
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\obj\Debug\EasyITMonitorTest.csproj.CopyComplete
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\obj\Debug\EasyITMonitorTest.dll
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\obj\Debug\EasyITMonitorTest.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitorTest\bin\Debug\Infra.dll.config

@@ -6,7 +6,7 @@ using System.ServiceProcess;
 
 namespace Domain.UseCases
 {
-    public class WatchDogService : WatchDog
+    public sealed class WatchDogService : WatchDog
     {
 
         public WatchDogService(IAgentParams agentParams, IAlert alert) : base(agentParams, alert)

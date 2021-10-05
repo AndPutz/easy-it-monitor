@@ -4,3 +4,6 @@ C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Data\obj\Debug\Easy
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Data\obj\Debug\EasyITMonitor.Infra.Data.csproj.CoreCompileInputs.cache
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Data\obj\Debug\EasyITMonitor.Infra.Data.dll
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Data\obj\Debug\EasyITMonitor.Infra.Data.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Data\bin\Debug\Domain.dll
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Data\bin\Debug\Domain.pdb
+C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Data\obj\Debug\EasyITMonitor.Infra.Data.csproj.CopyComplete

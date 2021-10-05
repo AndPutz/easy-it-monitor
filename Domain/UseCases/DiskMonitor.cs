@@ -7,7 +7,7 @@ using System.IO;
 
 namespace Domain.UseCases
 {
-    public class DiskMonitor : UseCase
+    public sealed class DiskMonitor : UseCase
     {
         private DTOMonitor DTO = null;
         private List<Disk> ListDiskMonitoring = null;

@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "EasyITMonitor.WebUI/1.0.0": {
         "dependencies": {
+          "EasyITMonitor.Infra.IoC": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.10",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.10",
           "Microsoft.AspNetCore.Identity.UI": "5.0.10",
@@ -1635,6 +1636,49 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "EasyITMonitor.Application/1.0.0": {
+        "dependencies": {
+          "EasyITMonitor.Domain": "1.0.0"
+        },
+        "runtime": {
+          "EasyITMonitor.Application.dll": {}
+        },
+        "compile": {
+          "EasyITMonitor.Application.dll": {}
+        }
+      },
+      "EasyITMonitor.Domain/1.0.0": {
+        "runtime": {
+          "Domain.dll": {}
+        },
+        "compile": {
+          "Domain.dll": {}
+        }
+      },
+      "EasyITMonitor.Infra.Data/1.0.0": {
+        "dependencies": {
+          "EasyITMonitor.Domain": "1.0.0"
+        },
+        "runtime": {
+          "EasyITMonitor.Infra.Data.dll": {}
+        },
+        "compile": {
+          "EasyITMonitor.Infra.Data.dll": {}
+        }
+      },
+      "EasyITMonitor.Infra.IoC/1.0.0": {
+        "dependencies": {
+          "EasyITMonitor.Application": "1.0.0",
+          "EasyITMonitor.Domain": "1.0.0",
+          "EasyITMonitor.Infra.Data": "1.0.0"
+        },
+        "runtime": {
+          "EasyITMonitor.Infra.Ioc.dll": {}
+        },
+        "compile": {
+          "EasyITMonitor.Infra.Ioc.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -4119,6 +4163,26 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "EasyITMonitor.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EasyITMonitor.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EasyITMonitor.Infra.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EasyITMonitor.Infra.IoC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
       "type": "referenceassembly",

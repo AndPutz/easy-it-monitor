@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 namespace Domain.UseCases
 {
-    public class WatchDogProcess : WatchDog
+    public sealed class WatchDogProcess : WatchDog
     {
 
         private IAlert _Alert;
