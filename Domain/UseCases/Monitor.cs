@@ -23,9 +23,16 @@ namespace Domain.UseCases
         }
 
         public virtual void Start()
-        {
+        {            
             Machine Machine = _MachineData.CollectData();
+
+            //TODO: com o Machine Name, devemos consulta o DB para trazer a categoria que está associada.
+            //Se não trazer nada iremos aplicar a rotina que usará palavras chaves pré-definidas para definir um nome padrão para as categorias.
+            //Se não encontrar na lista dessas palavras chaves que vão vir do DB, então podemos alterar a lista do BD. Se não encontrar gravar como Sem Categoria Definida.
+
             DTO.SaveMachine(Machine);
+            
+
             IdMachine = Machine.Id;
         }
 

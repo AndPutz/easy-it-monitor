@@ -19,6 +19,8 @@ namespace Domain.DTO
 
             if (IsConnectionAvaible())
             {
+                //TODO: Alterar a procedure WSQOSTORE_WATCHDOG_ITEM para se não tiver a categoria enviada no novo parâmetro, será inserida antes para que o registro possa ser associado.
+
                 OleDbCommand oCommand = DbConnection.CreateCommand();
                 oCommand.CommandText = "WSQOSTORE_WATCHDOG_ITEM";
                 oCommand.CommandType = CommandType.StoredProcedure;
@@ -28,14 +30,23 @@ namespace Domain.DTO
                 oCommand.Parameters.AddWithValue("@SERVICE_PACK", oItem.ServicePack);
                 oCommand.Parameters.AddWithValue("@PROCESSOR_COUNT", oItem.ProcessorCount);
 
+                //TODO: adicionar o parâmetro de IdCategory que já estará preenchido previamente.
+
                 OleDbParameter oParamId = new OleDbParameter("@ID", oItem.Id);
                 oParamId.Direction = ParameterDirection.Output;
 
-                oCommand.Parameters.Add(oParamId);
+                oCommand.Parameters.Add(oParamId);                                
 
                 oCommand.ExecuteNonQuery();
 
-                oItem.Id = Convert.ToInt64(oCommand.Parameters["@ID"].Value);
+                oItem = new Machine(Convert.ToInt64(oCommand.Parameters["@ID"].Value),
+                                    oItem.MachineName,
+                                    oItem.Platform,
+                                    oItem.Version,
+                                    oItem.ServicePack,
+                                    oItem.ProcessorCount,
+                                    oItem.CategoryMachinesId,
+                                    oItem.Category);                
 
                 oCommand.Dispose();
 

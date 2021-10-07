@@ -14,14 +14,12 @@ namespace Domain.UseCases
         {
             OperatingSystem os = Environment.OSVersion;
 
-            Machine _Machine = new Machine();
-
-            _Machine.Id = 0;
-            _Machine.MachineName = Environment.MachineName;
-            _Machine.Platform = os.Platform.ToString();
-            _Machine.Version = os.VersionString;
-            _Machine.ServicePack = os.ServicePack;
-            _Machine.ProcessorCount = Environment.ProcessorCount;
+            Machine _Machine = new Machine(Environment.MachineName,
+                                           os.Platform.ToString(),
+                                           os.VersionString,
+                                           os.ServicePack,
+                                           Environment.ProcessorCount);
+            
 
             return _Machine;
         }
