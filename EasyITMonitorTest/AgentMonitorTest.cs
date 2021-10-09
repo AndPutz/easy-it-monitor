@@ -1,4 +1,6 @@
 ﻿using System;
+using Domain.DTO;
+using Domain.Entities;
 using Domain.UseCases;
 using Infra;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -32,6 +34,17 @@ namespace EasyITMonitorTest
                 Assert.Fail("Params haven't Services");
 
             Assert.IsTrue(true);
+        }
+
+        [TestMethod]
+        public void MachineDataCollect()
+        {
+            MachineData _MachineData = new MachineData(agentParams);
+            DTOMonitor DTO = new DTOMonitor(access);
+
+            Machine _Machine = _MachineData.CollectData();            
+            
+            DTO.SaveMachine(_Machine);
         }
 
         [TestMethod]
