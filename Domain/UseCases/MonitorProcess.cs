@@ -5,7 +5,7 @@ namespace Domain.UseCases
 {
     public sealed class MonitorProcess : Monitor
     {
-        public MonitorProcess(IAgentParams agentParams, IAccess access) : base (agentParams, access)
+        public MonitorProcess(IAgentParams agentParams, IAccess access, IMachineData machineData) : base (agentParams, access, machineData)
         {
 
         }

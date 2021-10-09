@@ -65,7 +65,7 @@ namespace Infra
                     InitConfig();
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 InitConfig();
             }

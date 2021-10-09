@@ -38,8 +38,9 @@ namespace Agent
 
         protected override void OnStart(string[] args)
         {
-            monitorService = new MonitorService(new AgentParams(), alertHelper, access);
-            monitorProcess = new MonitorProcess(new AgentParams(), access);
+            AgentParams agentParams = new AgentParams();
+            monitorService = new MonitorService(agentParams, alertHelper, access, new MachineData(agentParams));
+            monitorProcess = new MonitorProcess(agentParams, access, new MachineData(agentParams));
 
             alertHelper.Alert(alertHelper.GetAlertTypeForAgentMonitorStarted(), "Service is started at " + DateTime.Now + " with TimerProcess on " + monitorService.Params.GetTimerProcess().ToString() + " ms, Keep Alive Timer on " + monitorService.Params.GetTimerKeepAlive().ToString() + " ms, Services: " + monitorService.Params.GetServices().Count.ToString() + " and Processes: " + monitorService.Params.GetProcesses().Count.ToString(), EAlertLevel.OFF);
             timerCycle.Elapsed += new ElapsedEventHandler(OnElapsedCycleTime);

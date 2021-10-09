@@ -11,14 +11,14 @@ namespace Domain.UseCases
 
         protected DTOMonitor DTO = null;
 
-        private MachineData _MachineData = null;        
+        private IMachineData _MachineData;
 
-        public Monitor(IAgentParams agentParams, IAccess access) : base(agentParams)
+        public Monitor(IAgentParams agentParams, IAccess access, IMachineData machineData) : base(agentParams)
         {
             agentParams.Load();
 
             DTO = new DTOMonitor(access);
-            _MachineData = new MachineData(agentParams);
+            _MachineData = machineData;
             MonitoringItems = new List<MonitorDetail>();            
         }
 

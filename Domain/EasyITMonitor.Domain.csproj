@@ -48,6 +48,7 @@
     <Compile Include="Entities\CategoryProcesses.cs" />
     <Compile Include="Entities\CategoryServices.cs" />
     <Compile Include="Entities\ProcessParam.cs" />
+    <Compile Include="Interfaces\IMachineData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DTO\DTO.cs" />
     <Compile Include="DTO\DTOMonitor.cs" />

@@ -24,8 +24,8 @@ namespace EasyITMonitorTest
         [TestMethod]
         public void ServiceStart()
         {            
-            MonitorService monitorService = new MonitorService(agentParams, alert, access);
-            MonitorProcess monitorProcess = new MonitorProcess(agentParams, access);
+            MonitorService monitorService = new MonitorService(agentParams, alert, access, new MachineData(agentParams));
+            MonitorProcess monitorProcess = new MonitorProcess(agentParams, access, new MachineData(agentParams));
 
             if (monitorService.Params == null)
                 Assert.Fail("Params not loaded");
@@ -50,7 +50,7 @@ namespace EasyITMonitorTest
         [TestMethod]
         public void MonitorService()
         {
-            MonitorService monitorService = new MonitorService(agentParams, alert, access);            
+            MonitorService monitorService = new MonitorService(agentParams, alert, access, new MachineData(agentParams));            
 
             monitorService.Monitoring();
 
@@ -60,7 +60,7 @@ namespace EasyITMonitorTest
         [TestMethod]
         public void MonitorProcess()
         {
-            MonitorProcess monitorProcess = new MonitorProcess(agentParams, access);
+            MonitorProcess monitorProcess = new MonitorProcess(agentParams, access, new MachineData(agentParams));
 
             monitorProcess.Monitoring();
 

@@ -17,7 +17,7 @@ namespace Domain.UseCases
 
         private IAlert _Alert;
 
-        public MonitorService(IAgentParams agentParams, IAlert alert, IAccess access) : base(agentParams, access)
+        public MonitorService(IAgentParams agentParams, IAlert alert, IAccess access, IMachineData machineData) : base(agentParams, access, machineData)
         {
             MemCounter = new PerformanceCounter("Memory", "Available MBytes");
             CpuUsage = new PerformanceCounter("Processor", "% Processor Time", "_Total");
