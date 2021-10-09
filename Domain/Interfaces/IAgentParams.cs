@@ -15,9 +15,9 @@ namespace Domain.Interfaces
 
         int GetMaxRecoveryAttempts();
 
-        List<ServiceEntity> GetServices();
+        List<ParamEntity> GetServices();
 
-        List<ProcessEntity> GetProcesses();
+        List<ProcessParam> GetProcesses();
 
 
         int GetTimerProcess();

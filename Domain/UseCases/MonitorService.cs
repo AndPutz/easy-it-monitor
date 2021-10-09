@@ -94,9 +94,9 @@ namespace Domain.UseCases
         {
             List<string> ServicesNotInstalled = new List<string>();
 
-            ServiceController[] ListServices = ServiceController.GetServices();
-            
-            foreach (ServiceEntity ServiceItem in Params.GetServices())
+            ServiceController[] ListServices = ServiceController.GetServices();            
+
+            foreach (ParamEntity ServiceItem in Params.GetServices())
             {
                 ServiceController Validation = ListServices.FirstOrDefault(f => f.ServiceName.Equals(ServiceItem.Name) || f.DisplayName.Equals(ServiceItem.Name));
 
@@ -181,7 +181,14 @@ namespace Domain.UseCases
 
         private ServiceEntity GetServiceParam(ServiceController Service)
         {
-            return Params.GetServices().FirstOrDefault(f => f.Name.Equals(Service.DisplayName) || f.Name.Equals(Service.ServiceName));
+            ParamEntity param = Params.GetServices().FirstOrDefault(f => f.Name.Equals(Service.DisplayName) || f.Name.Equals(Service.ServiceName));
+
+            ServiceEntity serviceEntity = null;
+
+            if (param != null)
+                serviceEntity = new ServiceEntity(param.Name, param.CycleTime);
+
+            return serviceEntity;
         }
 
         private float GetCpuFromMachine()

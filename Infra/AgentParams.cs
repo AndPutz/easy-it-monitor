@@ -11,9 +11,9 @@ namespace Infra
 {
     public class AgentParams : IAgentParams
     {
-        public List<ProcessEntity> Processes { get; set; }
+        public List<ProcessParam> Processes { get; set; }
 
-        public List<ServiceEntity> Services { get; set; }
+        public List<ParamEntity> Services { get; set; }
 
         /// <summary>
         /// Cycle Time
@@ -31,12 +31,12 @@ namespace Infra
 
         public AgentParams()
         {
-            Processes = new List<ProcessEntity>();
-            Services = new List<ServiceEntity>();
+            Processes = new List<ProcessParam>();
+            Services = new List<ParamEntity>();
         }
 
         public void Load()
-        {
+        {           
             AgentParams oConfig = null;
 
             try
@@ -65,7 +65,7 @@ namespace Infra
                     InitConfig();
                 }
             }
-            catch(Exception)
+            catch(Exception ex)
             {
                 InitConfig();
             }
@@ -78,12 +78,12 @@ namespace Infra
             return MaxRecoveryAttempts;
         }
 
-        public List<ServiceEntity> GetServices()
+        public List<ParamEntity> GetServices()
         {
             return Services;
         }
 
-        public List<ProcessEntity> GetProcesses()
+        public List<ProcessParam> GetProcesses()
         {
             return Processes;
         }
@@ -136,15 +136,15 @@ namespace Infra
 
             Process[] ListProcesses = Process.GetProcesses();
 
-            Services = new List<ServiceEntity>();
-            Processes = new List<ProcessEntity>();
+            Services = new List<ParamEntity>();
+            Processes = new List<ProcessParam>();
             MaxRecoveryAttempts = 3;
             TimerKeepAlive = 62000;
             TimerProcess = 5000;
 
             foreach (ServiceController _Service in ListServices)
             {
-                ServiceEntity serviceEntity = new ServiceEntity() { Name = _Service.DisplayName, CycleTime = 0 };
+                ParamEntity serviceEntity = new ParamEntity(_Service.DisplayName, 0);
 
                 if (Services.Contains(serviceEntity) == false)
                     Services.Add(serviceEntity);
@@ -152,7 +152,7 @@ namespace Infra
 
             foreach (Process _Process in ListProcesses)
             {
-                ProcessEntity processEntity = new ProcessEntity() { Name = _Process.ProcessName, Detail = "", CycleTime = 0 };
+                ProcessParam processEntity = new ProcessParam(_Process.ProcessName, 0);
 
                 if (Processes.Contains(processEntity) == false)
                     Processes.Add(processEntity);

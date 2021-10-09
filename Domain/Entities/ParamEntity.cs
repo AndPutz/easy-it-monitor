@@ -12,6 +12,18 @@ namespace Domain.Entities
         /// </summary>
         public int CycleTime { get; set; }
 
+        public ParamEntity()
+        {
+
+        }
+
+        public ParamEntity(string name, int cycleTime)
+        {
+            //TODO: Validar o Domain
+            Name = name;
+            CycleTime = cycleTime;
+        }
+
         public virtual int CompareTo(object obj)
         {
             return Name.CompareTo((obj as ParamEntity).Name);

@@ -19,7 +19,7 @@ namespace Domain.DTO
 
             if (IsConnectionAvaible())
             {
-                //TODO: Alterar a procedure WSQOSTORE_WATCHDOG_ITEM para se não tiver a categoria enviada no novo parâmetro, será inserida antes para que o registro possa ser associado.
+                //TODO: Alterar a procedure WSQOSTORE_WATCHDOG_ITEM para se não tiver a categoria (0) enviada no novo parâmetro, será inserida antes para que o registro possa ser associado.
 
                 OleDbCommand oCommand = DbConnection.CreateCommand();
                 oCommand.CommandText = "WSQOSTORE_WATCHDOG_ITEM";
@@ -39,14 +39,7 @@ namespace Domain.DTO
 
                 oCommand.ExecuteNonQuery();
 
-                oItem = new Machine(Convert.ToInt64(oCommand.Parameters["@ID"].Value),
-                                    oItem.MachineName,
-                                    oItem.Platform,
-                                    oItem.Version,
-                                    oItem.ServicePack,
-                                    oItem.ProcessorCount,
-                                    oItem.CategoryMachinesId,
-                                    oItem.Category);                
+                oItem.Update(Convert.ToInt64(oCommand.Parameters["@ID"].Value));                                    
 
                 oCommand.Dispose();
 

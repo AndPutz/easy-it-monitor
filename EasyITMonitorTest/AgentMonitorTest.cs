@@ -44,6 +44,7 @@ namespace EasyITMonitorTest
             Assert.IsTrue(monitorService.MonitoringItems.Count > 0);
         }
 
+        [TestMethod]
         public void MonitorProcess()
         {
             MonitorProcess monitorProcess = new MonitorProcess(agentParams, access);

@@ -5,8 +5,8 @@ namespace Domain.Entities
 {
     public class CategoryEntity : Entity
     {
-        public int Id { get; private set; }
-        public string Name { get; private set; }
+        public int Id { get; protected set; }
+        public string Name { get; protected set; }
 
         public CategoryEntity(string name)
         {
@@ -32,5 +32,11 @@ namespace Domain.Entities
 
             Name = name;
         }
+
+        public void Update(string name)
+        {
+            ValidateDomain(name);
+        }
+
     }
 }

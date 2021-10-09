@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AgentParams xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Processes>    
-    <ProcessParam>
+    <ProcessEntity>
       <Name>Teams</Name>
       <CycleTime>0</CycleTime>
       <Detail />
-    </ProcessParam>    
-    <ProcessParam>
+    </ProcessEntity>    
+    <ProcessEntity>
       <Name>Skype</Name>
       <CycleTime>0</CycleTime>
       <Detail />
-    </ProcessParam>    
-    <ProcessParam>
+    </ProcessEntity>    
+    <ProcessEntity>
       <Name>GitHubDesktop</Name>
       <CycleTime>0</CycleTime>
       <Detail />
-    </ProcessParam>    
-    <ProcessParam>
+    </ProcessEntity>    
+    <ProcessEntity>
       <Name>OUTLOOK</Name>
       <CycleTime>0</CycleTime>
       <Detail />
-    </ProcessParam>    
+    </ProcessEntity>    
   </Processes>
   <Services>    
-    <ParamEntity>
+    <ServiceEntity>
       <Name>ASP.NET State Service</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>        
-    <ParamEntity>
+    </ServiceEntity>        
+    <ServiceEntity>
       <Name>KEPServerEX 5.19 Key Service</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>
-    <ParamEntity>
+    </ServiceEntity>
+    <ServiceEntity>
       <Name>KEPServerEX 5.19 Event Logger</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>
-    <ParamEntity>
+    </ServiceEntity>
+    <ServiceEntity>
       <Name>KEPServerEX 5.19 Runtime</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>
-    <ParamEntity>
+    </ServiceEntity>
+    <ServiceEntity>
       <Name>KEPServerEX 5.19 OPC .NET</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>    
-    <ParamEntity>
+    </ServiceEntity>    
+    <ServiceEntity>
       <Name>SQL Server (MSSQLSERVER)</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>
-    <ParamEntity>
+    </ServiceEntity>
+    <ServiceEntity>
       <Name>SQL Server Analysis Services (MSSQLSERVER)</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>        
-    <ParamEntity>
+    </ServiceEntity>        
+    <ServiceEntity>
       <Name>OpcEnum</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>    
-    <ParamEntity>
+    </ServiceEntity>    
+    <ServiceEntity>
       <Name>Sequor GB Hemming</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>        
-    <ParamEntity>
+    </ServiceEntity>        
+    <ServiceEntity>
       <Name>SQL Server Agent (MSSQLSERVER)</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>            
+    </ServiceEntity>            
   </Services>
   <TimerProcess>5000</TimerProcess>
   <TimerKeepAlive>62000</TimerKeepAlive>

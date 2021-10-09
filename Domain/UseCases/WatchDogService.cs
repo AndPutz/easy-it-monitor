@@ -51,7 +51,12 @@ namespace Domain.UseCases
                 ServiceController[] oListServices = ServiceController.GetServices();
                 foreach (ServiceController ServiceContr in oListServices)
                 {                    
-                    ServiceEntity ServiceToWatch = Params.GetServices().FirstOrDefault(f => f.Name.Equals(ServiceContr.DisplayName));
+                    ParamEntity param = Params.GetServices().FirstOrDefault(f => f.Name.Equals(ServiceContr.DisplayName));
+
+                    ServiceEntity ServiceToWatch = null;
+
+                    if (param != null)
+                        ServiceToWatch = new ServiceEntity(param.Name, param.CycleTime);
 
                     if (ServiceToWatch == null)
                     {
