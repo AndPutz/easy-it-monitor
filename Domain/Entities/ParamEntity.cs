@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Validation;
+using System;
 
 namespace Domain.Entities
 {
@@ -19,8 +20,27 @@ namespace Domain.Entities
 
         public ParamEntity(string name, int cycleTime)
         {
-            //TODO: Validar o Domain
+            ValidateDomain(name, cycleTime);
+        }
+        
+        public void Update(string name, int cycleTime)
+        {
+            ValidateDomain(name, cycleTime);
+        }
+
+        private void ValidateDomain(string name, int cycleTime)
+        {
+            DomainExceptionValidation.When(string.IsNullOrEmpty(name),
+                "Name is required!");
+
+            DomainExceptionValidation.When(name.Length <= 2,
+                "Invalid Name (" + name + "), too short!");
+
             Name = name;
+
+            DomainExceptionValidation.When(cycleTime < 0,
+                "Cycle Time must be greater or equal than 0");
+
             CycleTime = cycleTime;
         }
 

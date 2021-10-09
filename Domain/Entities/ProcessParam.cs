@@ -5,13 +5,21 @@ namespace Domain.Entities
     {
         public string Detail { get; set; }
 
-        public ProcessParam(string name, int cycleTime) : base(name, cycleTime)
+        public ProcessParam(string name, int cycleTime, string detail) : base(name, cycleTime)
         {
-            
+            Detail = detail;
         }
         public ProcessParam()
         {
 
+        }        
+
+        public void Update(string name, int cycleTime, string detail)
+        {
+            base.Update(name, cycleTime);
+
+            Detail = detail;
         }
+
     }
 }

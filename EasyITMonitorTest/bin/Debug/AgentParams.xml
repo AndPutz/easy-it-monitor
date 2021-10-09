@@ -1,32 +1,1334 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AgentParams xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Processes>    
+  <Processes>
+    <ProcessParam>
+      <Name>msoasb</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>svchost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>AcrobatNotificationClient</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>UshUpgradeService</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Dsapi</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>IntelCpHDCPSvc</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
     <ProcessParam>
       <Name>Teams</Name>
       <CycleTime>0</CycleTime>
       <Detail />
-    </ProcessParam>    
+    </ProcessParam>
     <ProcessParam>
-      <Name>Skype</Name>
+      <Name>ServiceShell</Name>
       <CycleTime>0</CycleTime>
       <Detail />
-    </ProcessParam>    
+    </ProcessParam>
     <ProcessParam>
-      <Name>GitHubDesktop</Name>
+      <Name>PerfWatson2</Name>
       <CycleTime>0</CycleTime>
       <Detail />
-    </ProcessParam>    
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ApRemote</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>WmiPrvSE</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>HidMonitorSvc</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>atmgr</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>DDVCollectorSvcApi</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>RuntimeBroker</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>csrss</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>OpcEnum</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ServiceHub.ThreadedWaitDialog</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>SgrmBroker</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Microsoft.Photos</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>vstest.console</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>YourPhone</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>VBCSCompiler</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>chrome</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Video.UI</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>conhost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>dwm</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Omron.Cxmw.Modules.Ppp.PppService</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>SDXHelperBgt</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>smss</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>taskhostw</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>dllhost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>services</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>server_admin</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>msedge</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>UiPath.RobotJS.UserHost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>dptf_helper</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>igfxEM</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ServiceHub.DataWarehouseHost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>IAStorIcon</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>explorer</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>IQOptionUpdater</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
     <ProcessParam>
       <Name>OUTLOOK</Name>
       <CycleTime>0</CycleTime>
       <Detail />
-    </ProcessParam>    
+    </ProcessParam>
+    <ProcessParam>
+      <Name>IAStorDataMgrSvc</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>IpOverUsbSvc</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ServiceHub.SettingsHost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Notion</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>notepad++</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>hidfind</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>SupportAssistAppWire</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Skype</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>devenv</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>GoogleCrashHandler</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>aspnet_state</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>msdtc</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ApMsgFwd</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ServiceHub.TestWindowStoreHost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>WavesSvc64</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>hasplms</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>SearchApp</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Calculator</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>daqnavi_daemon</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>HPLaserJetService</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>jhi_service</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>FortiSSLVPNdaemon</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ServiceHub.VSDetouredHost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>GitHubDesktop</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>git</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>keysvc</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>igfxCUIService</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>armsvc</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>inetinfo</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>winlogon</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>DbxSvc</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ServiceHub.Host.CLR.x86</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>DDVDataCollector</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>esif_uf</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>MSBuild</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>WUDFHost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ServiceHub.Host.CLR.x64</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>wlanext</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Dropbox</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>TelemetryUtility</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>QtWebEngineProcess</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>HostStorageService</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Omron.Cxmw.Modules.AutoIP.AutoIPService</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>UserOOBEBroker</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>WMSvc</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>SecurityHealthSystray</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>SearchIndexer</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>MsMpEng</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>StartMenuExperienceHost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>spoolsv</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>RAVBg64</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>dasHost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>StandardCollector.Service</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>SMSvcHost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>vpnagent</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>fontdrvhost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>FCDBLog</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>GoogleCrashHandler64</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>DropboxUpdate</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Intel_PIE_Service</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ApntEx</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>scpbradguard</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>OneDrive</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>IntelCpHeciSvc</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Memory Compression</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Microsoft.ServiceHub.Controller</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ScriptedSandbox64</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>mqsvc</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>server_eventlog</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>FNPLicensingService</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>fdhost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>testhost.net472.x86</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>SecurityHealthService</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>SupportAssistAgent</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>sqlwriter</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>WavesSysSvc64</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ctfmon</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ciscowebexstart</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>scpbradserv</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>FoxitReaderUpdater</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>sqlservr</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>LMS</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>RstMwService</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ShellExperienceHost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Omron.Cxmw.Modules.Serial.SerialService</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>unsecapp</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>scheduler</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>VCDDaemon</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>PresentationFontCache</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>SettingSyncHost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>MpCopyAccelerator</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>HostControlService</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>msmdsrv</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>HPStatusAlerts</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ServiceHub.RoslynCodeAnalysisService</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Registry</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>RtkNGUI64</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>DeliveryService</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>FortiTray</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>SQLAGENT</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>iqtray</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>SupportAssistClientUI</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ServiceManager</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>NetExpressUpdater</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Apoint</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>hpwuschd2</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>NisSrv</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>LockApp</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>FortiSettings</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>server_runtime</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ApplicationFrameHost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>SDXHelper</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>sihost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>nlssrv32</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>TextInputHost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>vpnui</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>fdlauncher</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>xi_server_runtime</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>DDVRulesProcessor</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>lsass</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>RtkAudioService64</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>ServiceHub.IdentityHost</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>wininit</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>FortiESNAC</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>System</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>MsDepSvc</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
+    <ProcessParam>
+      <Name>Idle</Name>
+      <CycleTime>0</CycleTime>
+      <Detail />
+    </ProcessParam>
   </Processes>
-  <Services>    
+  <Services>
+    <ParamEntity>
+      <Name>Adobe Acrobat Update Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Roteador AllJoyn</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Gateway de Camada de Aplicativo</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>AlpsAlpine HID Monitor Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Auxiliar de Host do Aplicativo</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Identidade do Aplicativo</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Informações sobre Aplicativos</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gerenciamento de aplicativo</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Preparação de Aplicativos</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Microsoft App-V Client</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Implantação AppX (AppXSVC)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
     <ParamEntity>
       <Name>ASP.NET State Service</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>        
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço AssignedAccessManager</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Construtor de Pontos de Extremidade de Áudio do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Áudio do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Hora da Rede Celular</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Instalador do ActiveX (AxInstSV)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Criptografia de Unidade de Disco BitLocker</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Mecanismo de Filtragem Básica</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de transferência inteligente de tela de fundo</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Infraestrutura de Tarefas de Segundo Plano</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Gateway Bluetooth de Áudio</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço AVCTP</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Suporte a Bluetooth</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Declarações para o Serviço de Token do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço do Gerenciador de Acesso de Recurso</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Plataforma de Dispositivos Conectados</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Propagação de Certificado</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Licenças de Cliente (ClipSVC)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>COM+ System Application</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>CoreMessaging</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Intel(R) Content Protection HECI Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Intel(R) Content Protection HDCP Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviços de criptografia</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Arquivos Offline</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Cwbrxd</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>DaqNavi Device Monitor</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Atualização do Dropbox (dbupdate)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Atualização do Dropbox (dbupdatem)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>DbxSvc</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Inicializador do Processo de Servidor DCOM</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Dell Command | Power Manager Notify</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Dell Data Vault Service API</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Dell Data Vault Collector</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Dell Data Vault Processor</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Otimizador de unidade</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Dell Hardware Support</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Dell.CommandPowerManager.Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Dell Client Management Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Dell Digital Delivery Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Associação de Dispositivo</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Instalação de Dispositivo</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Agente de Descoberta em Segundo Plano de DevQuery</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Cliente DHCP</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Coletor de Padrões de Hub de Diagnóstico da Microsoft (R)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Diagnostic Execution Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Experiências do Usuário Conectado e Telemetria</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>DialogBlockingService</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Exibir Serviço de Política</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Aprimoramento de Exibição</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Registro de Gerenciamento de Dispositivos</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Roteamento de mensagens de envio por Push WAP do Gerenciamento de Dispositivos</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Cliente DNS</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Otimização de Entrega</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Configuração Automática com Fio</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Política de Diagnóstico</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gerenciador de Instalação de Dispositivo</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Compartilhamento de Dados</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Uso de Dados</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Protocolo de Autenticação Extensível</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>EasyITMonitorAgent</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>EasyITWatchDogAgent</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Microsoft Edge Update (edgeupdate)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Microsoft Edge Update (edgeupdatem)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>EFS (Encrypting File System)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Modo inserido</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Gerenciamento de Aplicativos Empresariais</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Intel(R) Dynamic Platform and Thermal Framework service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Log de Eventos do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>COM+ evento do sistema</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Fax</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>FortiClient Service Scheduler</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Host de Provedor da Descoberta de Função</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Publicação de Recursos de Descoberta de Função</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Histórico de Arquivos</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>FlexNet Licensing Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Cache de Fontes do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Windows Presentation Foundation Font Cache 3.0.0.0</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Servidor de Quadros de Câmera do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Microsoft FTP Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Google Chrome Elevation Service (GoogleChromeElevationService)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Cliente da Política de Grupo</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>GraphicsPerfSvc</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço do Google Update (gupdate)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço do Google Update (gupdatem)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Sentinel LDK License Manager</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Intel(R) RST HFC Disable Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Dispositivos de Interface Humana</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Rede Host</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Credential Vault Host Control Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Credential Vault Host Storage</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>HP LaserJet Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Host HV</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Intel(R) Optane(TM) Memory Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Intel(R) Rapid Storage Technology</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Hotspot Móvel do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>InstallDriver Table Manager</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Intel(R) HD Graphics Control Panel Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Administração do IIS</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Módulos de Criação de Chaves IKE e AuthIP do IPSec</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Instalação da Microsoft Store</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Intel(R) Capability Licensing Service TCP IP Interface</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Intel(R) TPM Provisioning Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Intel(R) Audio Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Auxiliar de IP</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Windows Phone IP over USB Transport (IpOverUsbSvc)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Configuração de Conversão de IP</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>IQOptionUpdater</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Intel(R) Dynamic Application Loader Host Interface Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
     <ParamEntity>
       <Name>KEPServerEX 5.19 Key Service</Name>
       <CycleTime>0</CycleTime>
@@ -42,7 +1344,103 @@
     <ParamEntity>
       <Name>KEPServerEX 5.19 OPC .NET</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>    
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Isolamento de Chave CNG</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>KtmRm para Coordenador de Transações Distribuídas</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Server</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Estação de trabalho</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Geolocalização</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Gerenciador de Licença do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Mapeador da Descoberta de Topologia da Camada de Link</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Auxiliar NetBIOS TCP/IP</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Intel(R) Management and Security Application Local Management Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gerenciador de Sessão Local</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Experiência em Idiomas</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gerenciador de Mapas Baixados</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Microsoft Edge Elevation Service (MicrosoftEdgeElevationService)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Windows Mixed Reality OpenXR Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Mozilla Maintenance Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Windows Defender Firewall</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Web Deployment Agent Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Coordenador de transações distribuídas</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>SQL Server Integration Services 12.0</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Iniciador Microsoft iSCSI</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Windows Installer</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Filtro de Teclado da Microsoft</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Enfileiramento de Mensagens</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>SQL Full-text Filter Daemon Launcher (MSSQLSERVER)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
     <ParamEntity>
       <Name>SQL Server (MSSQLSERVER)</Name>
       <CycleTime>0</CycleTime>
@@ -50,19 +1448,819 @@
     <ParamEntity>
       <Name>SQL Server Analysis Services (MSSQLSERVER)</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>        
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Autenticação Natural</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Navigator Service Manager</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Assistente de Conectividade de Rede</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Agente de Conexão de Rede</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Instalação Automática de Dispositivos Conectados à Rede</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>NetExpress Updater</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Logon de rede</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Conexões de Rede</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Listener Adapter do Net.Msmq</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Listener Adapter do Net.Pipe</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço da Lista de Redes</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Configuração de Rede</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Listener Adapter Net.Tcp</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Compartilhamento de Porta Net.Tcp</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Contêiner do Microsoft Passport</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Microsoft Passport</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Reconhecimento de Locais de Rede</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Nalpeiron Licensing Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Interface de Repositório de Rede</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Virtualização de Rede</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>OMRON Ethernet Direct Connection Manager</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>OMRON USB Connection Manager</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>OMRON USB Serial Connection Manager</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
     <ParamEntity>
       <Name>OpcEnum</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>    
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Windows 10 Update Facilitation Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gerenciador de Identidades de Rede de Par</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Agrupamento de Rede de Par</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Auxiliar de Compatibilidade de Programas</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>BranchCache</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Simulação de Percepção do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Host de DLL de Contador de Desempenho</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Telefonia</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Logs e alertas de desempenho</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Plug and Play</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Publicação de Nome de Computador do PNRP</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Protocolo PNRP</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Agente de Política IPsec</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Ligar/Desligar</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Extensões e Notificações da Impressora</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Perfil de Usuário</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Windows PushToInstall</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Quality Windows Audio Video Experience</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>RabbitMQ</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gerenciador de conexão de acesso remoto automático</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gerenciador de conexão de acesso remoto</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Roteamento e Acesso Remoto</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Registro remoto</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>SQL Server Reporting Services (MSSQLSERVER)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Demonstração de Revenda</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Gerenciamento de Rádio</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Mapeador de Ponto de Extremidade RPC</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Alocador Remote Procedure Call (RPC)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>RPC (Chamada de Procedimento Remoto)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Intel(R) Storage Middleware Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Realtek Audio Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gerente de Contas de Segurança</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Cartão inteligente</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Enumeração de Dispositivo de Cartão Inteligente</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Agendador de Tarefas</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Componente de Segurança Bradesco</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Política de Remoção de Cartão Inteligente</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Backup do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Logon secundário</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Segurança do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gerenciador de NFC/SE e Pagamentos</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Notificação de Eventos do Sistema</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Proteção Avançada contra Ameaças do Windows Defender</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Dados de Sensor</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Sensor</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Monitoramento de Sensor</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
     <ParamEntity>
       <Name>Sequor GB Hemming</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>        
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Sequor GB SLD VIN Machine</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Configuração da Área de Trabalho Remota</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>System Guard Runtime Monitor Broker</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>ICS (Compartilhamento de Conexão com a Internet)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Dados Espaciais</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Detecção do hardware do shell</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Shared PC Account Manager</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>SMP de Espaços de Armazenamento da Microsoft</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Roteador SMS do Microsoft Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Interceptação SNMP</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Percepção do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Spooler de Impressão</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Proteção de Software</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>SQL Server Distributed Replay Client</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>SQL Server Distributed Replay Controller</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>SQL Server Browser</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
     <ParamEntity>
       <Name>SQL Server Agent (MSSQLSERVER)</Name>
       <CycleTime>0</CycleTime>
-    </ParamEntity>            
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gravador VSS do SQL Server</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Descoberta SSDP</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>OpenSSH Authentication Agent</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço SSTP</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Repositório de Estado</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Assistente de aquisição de imagens do Windows (WIA)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>StockViewer PriceUpdates</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Armazenamento</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Dell SupportAssist</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Verificador de Ponto</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Provedor de Cópia de Sombra de Software da Microsoft</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>SysMain</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Agente de Eventos do Sistema</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Teclado Virtual e Painel de Manuscrito</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Telefonia</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviços de Área de Trabalho Remota</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Temas</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Thunderbolt(TM) Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gerenciamento de Camadas de Armazenamento</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Agente de Tempo</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gerenciador de Conta da Web</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Cliente de rastreamento de link distribuído</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de solução de problemas recomendado</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Instalador de Módulos do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Atualizador de Fuso Horário Automático</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de User Experience Virtualization</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Microsoft Update Health Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Redirecionador de Portas do Modo do Usuário dos Serviços de Área de Trabalho</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Host de dispositivo UPnP</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gerenciador de Usuários</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Credential Vault Upgrade Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Atualizar o Serviço Orchestrator</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Compositor de Áudio Volumétrico</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gerenciador de Credenciais</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>VirtualBox system service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Disco Virtual</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Computação de Host do Hyper-V</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Interface de Serviço de Convidado do Hyper-V</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Pulsação do Hyper-V</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Troca de Dados do Hyper-V</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Virtualização de Área de Trabalho Remota do Hyper-V</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Desligamento de Convidado do Hyper-V</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Sincronização de Data/Hora do Hyper-V</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Direto do Hyper-V PowerShell</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Solicitante de Cópia de Sombra de Volume do Hyper-V</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Cisco AnyConnect Secure Mobility Agent</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Visual Studio ETW Event Collection Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Cópia de Sombra de Volume</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Visual Studio Standard Collector Service 150</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Horário do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Log W3C</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Publicação da World Wide Web</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Medic do Windows Update</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>WalletService</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>WarpJITSvc</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Ativação de Processos do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Mecanismo de Backup em Nível de Bloco</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Biometria do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gerenciador de Conexões do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Conexão Fácil do Windows - Registrador de Configuração</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Host do Serviço de Diagnóstico</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Host do Sistema de Diagnósticos</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Inspeção de Rede do Microsoft Defender Antivírus</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Cliente da Web</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Coletor de Eventos do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Host do Provedor de Criptografia do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Suporte do Painel de Controle Relatórios de problemas</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Relatórios de Erro do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço do Gerenciador de Conexões de Serviços do Wi-Fi Direct</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Eventos de Aquisição de Imagens Estáticas</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Microsoft Defender Antivírus</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Descoberta Automática de Proxy da Web do WinHTTP</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Testador de instrumentação de gerenciam. do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Windows Remote Management (WS-Management)</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço do Windows Insider</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Configuração Automática de WLAN</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Assistente de Conexão de Conta da Microsoft</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Assistente de Perfil Local</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de gerenciamento do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Adaptador de Desempenho WMI</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Compartilhamento de Rede do Windows Media Player</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Gerenciamento da Web</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Pastas de Trabalho</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Controles dos Pais</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço Enumerador de Dispositivos Portáteis</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço do Sistema de Notificações por Push do Windows</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Central de Segurança</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Windows Search</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Windows Update</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Configuração Automática de WWAN</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Gerenciador de Autenticação Xbox Live</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Salvar Jogos no Xbox Live</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Xbox Accessory Management Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Rede Xbox Live</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Waves Audio Services</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Agent Activation Runtime_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Usuário do GameDVR e Transmissão_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Suporte a Usuários de Bluetooth_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>CaptureService_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Usuário da Área de Transferência_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Usuário da Plataforma de Dispositivos Conectados_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>ConsentUX_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>CredentialEnrollmentManagerUserSvc_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>DeviceAssociationBroker_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>DevicePicker_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>DevicesFlow_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>MessagingService_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Host de Sincronização_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Dados de Contato_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>PrintWorkflow_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de usuário UDK_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Armazenamento de Dados de Usuário_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Acesso a Dados de Usuário_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Serviço de Usuário de Notificações por Push do Windows_28118cab</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
+    <ParamEntity>
+      <Name>Intel® PROSet/Wireless Service</Name>
+      <CycleTime>0</CycleTime>
+    </ParamEntity>
   </Services>
   <TimerProcess>5000</TimerProcess>
   <TimerKeepAlive>62000</TimerKeepAlive>

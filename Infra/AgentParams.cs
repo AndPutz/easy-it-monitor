@@ -152,7 +152,7 @@ namespace Infra
 
             foreach (Process _Process in ListProcesses)
             {
-                ProcessParam processEntity = new ProcessParam(_Process.ProcessName, 0);
+                ProcessParam processEntity = new ProcessParam(_Process.ProcessName, 0, string.Empty);
 
                 if (Processes.Contains(processEntity) == false)
                     Processes.Add(processEntity);
