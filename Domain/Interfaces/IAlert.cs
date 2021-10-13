@@ -30,9 +30,13 @@ namespace Domain.Interfaces
 
         string GetAlertTypeForWatchDogServiceNotPossible();
 
+        string GetAlertTypeForWatchDogProcessNotPossible();
+
         string GetAlertTypeForWatchDogProcessOn();
 
-        string GetAlertTypeForWatchDogProcessOff();        
+        string GetAlertTypeForWatchDogProcessOff();
+
+        string GetAlertTypeForWatchDogProcessStatusError();
 
         string GetAlertTypeForAutomationItCleanTempDirInfo();
 

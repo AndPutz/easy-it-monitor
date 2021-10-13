@@ -116,6 +116,16 @@ namespace Infra
             return "WATCHDOG_SERVICE_NOT_POSSIBLE";
         }
 
+        public string GetAlertTypeForWatchDogProcessNotPossible()
+        {
+            return "WATCHDOG_PROCESS_NOT_POSSIBLE";
+        }
+
+        public string GetAlertTypeForWatchDogProcessStatusError()
+        {
+            return "WATCHDOG_PROCESS_STATUS_ERROR";
+        }
+
         private void WriteToFile(string Message)
         {
             string path = AppDomain.CurrentDomain.BaseDirectory + "\\Logs";

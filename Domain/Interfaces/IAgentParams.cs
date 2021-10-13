@@ -15,8 +15,16 @@ namespace Domain.Interfaces
 
         int GetMaxRecoveryAttempts();
 
+        /// <summary>
+        /// Get services configurated
+        /// </summary>
+        /// <returns></returns>
         List<ParamEntity> GetServices();
 
+        /// <summary>
+        /// Get processes configurated 
+        /// </summary>
+        /// <returns></returns>
         List<ProcessParam> GetProcesses();
 
 

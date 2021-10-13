@@ -67,6 +67,7 @@
     <Compile Include="UseCases\Automation.cs" />
     <Compile Include="UseCases\DiskMonitor.cs" />
     <Compile Include="UseCases\MachineData.cs" />
+    <Compile Include="UseCases\ManageProcess.cs" />
     <Compile Include="UseCases\Monitor.cs" />
     <Compile Include="UseCases\MonitorProcess.cs" />
     <Compile Include="UseCases\MonitorService.cs" />

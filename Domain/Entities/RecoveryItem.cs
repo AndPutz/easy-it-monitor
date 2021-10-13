@@ -11,7 +11,7 @@ namespace Domain.Entities
         public int AttempsToRecover { get; set; }
         public string Path { get; set; }
         public ServiceController ServiceItem { get; set; }
-        public Process ProcessItem { get; set; }
+        public ProcessEntity ProcessItem { get; set; }
     }
 
     public enum RecoveryType

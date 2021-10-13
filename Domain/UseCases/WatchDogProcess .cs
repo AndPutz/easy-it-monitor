@@ -1,18 +1,22 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces;
 using System;
+using System.Linq;
 using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace Domain.UseCases
 {
     public sealed class WatchDogProcess : WatchDog
     {
+        private ManageProcess manageProcess;
 
         private IAlert _Alert;
 
         public WatchDogProcess(IAgentParams agentParams, IAlert alert) : base(agentParams, alert)
         {
             _Alert = alert;
+            manageProcess = new ManageProcess(alert);
         }
 
         /// <summary>
@@ -26,19 +30,16 @@ namespace Domain.UseCases
                 for (int nIdx = 0; nIdx < ListRecovering.Count; nIdx++)
                 {
                     RecoveryItem RecoverItem = ListRecovering[nIdx];
-                    _Alert.Alert(_Alert.GetAlertTypeForWatchDogProcessOff(), "PROCESS " + RecoverItem.ProcessItem.ProcessName + " OFF", EAlertLevel.HIGH);
+                    _Alert.Alert(_Alert.GetAlertTypeForWatchDogProcessOff(), "PROCESS " + RecoverItem.ProcessItem.Name + " OFF", EAlertLevel.HIGH);
 
                     if (Recover(RecoverItem))
-                    {
-                        RecoverItem.ProcessItem.Dispose();
+                    {                        
                         ListRecovering.RemoveAt(nIdx);
                     }
                     else if (RecoverItem.Status == RecoveryStatus.NotPossible)
-                    {
-                        RecoverItem.ProcessItem.Dispose();
+                    {                        
                         ListRecovering.RemoveAt(nIdx);
-                    }
-                    //else = Monitoring 
+                    }                    
                 }
             }
 
@@ -49,36 +50,35 @@ namespace Domain.UseCases
         {
             if (HasParameters())
             {
-                Process[] ListProcesses = Process.GetProcesses();
-                //TODO: Identify Process not running
-                //foreach (Process ProcessContr in ListProcesses)
-                //{                    
-                //    ServiceEntity ServiceToWatch = Params.Services.FirstOrDefault(f => f.Name.Equals(ProcessContr.ProcessName));
+                List<ProcessParam> processesParams = Params.GetProcesses();
 
-                //    if (ServiceToWatch == null)
-                //    {
-                //        ProcessContr.Dispose();
-                //    }
-                //    else if (ProcessContr. != ServiceControllerStatus.Running)
-                //    {
-                //        if (!ListRecovering.Exists(fnd => fnd.Name.Equals(ServiceToWatch.Name) &&
-                //                                   fnd.RecoverType == RecoveryType.Service))
-                //        {
-                //            ListRecovering.Add(new RecoveryItem()
-                //            {
-                //                RecoverType = RecoveryType.Service,
-                //                Name = ServiceToWatch.Name,
-                //                Status = RecoveryStatus.Stop,
-                //                AttempsToRecover = 0,
-                //                ProcessItem = ProcessContr,
-                //                ServiceItem = null
-                //            });
-                //        }
-                //    }
-                //}
+                foreach (ProcessParam processParam in processesParams)
+                {
+                    if(manageProcess.GetStatus(processParam.Name) == false)
+                    {
+                        AddListRecovering(processParam);
+                    }                                       
+                }                
             }
 
             return base.HasRecovery();
+        }
+
+        private void AddListRecovering(ProcessParam processParam)
+        {
+            if (!ListRecovering.Exists(fnd => fnd.Name.Equals(processParam.Name) &&
+                                                   fnd.RecoverType == RecoveryType.Process))
+            {
+                ListRecovering.Add(new RecoveryItem()
+                {
+                    RecoverType = RecoveryType.Process,
+                    Name = processParam.Name,
+                    Status = RecoveryStatus.Stop,
+                    AttempsToRecover = 0,
+                    ProcessItem = new ProcessEntity(processParam.Name, processParam.CycleTime, processParam.Detail),
+                    ServiceItem = null
+                });
+            }
         }
 
         /// <summary>
@@ -102,7 +102,35 @@ namespace Domain.UseCases
         {
             if (Item.ProcessItem != null)
             {
-                //TODO: Recover Process
+                if (Item.Status != RecoveryStatus.Running && Item.AttempsToRecover == 0)
+                {
+                    Item.Status = RecoveryStatus.Starting;
+                    Item.AttempsToRecover = 1;
+
+                    if(manageProcess.StartProcess(Item.ProcessItem.Name, Item.ProcessItem.Detail))
+                    {
+                        Item.Status = RecoveryStatus.Running;
+                    }
+                }
+                else if (Item.AttempsToRecover > 0)
+                {
+                    if (Item.Status != RecoveryStatus.Running)
+                    {
+                        if (manageProcess.StartProcess(Item.ProcessItem.Name, Item.ProcessItem.Detail))
+                        {
+                            Item.Status = RecoveryStatus.Running;
+                        }
+                        else
+                            Item.AttempsToRecover++;
+
+                    }                    
+                }
+                else if (Item.AttempsToRecover >= Params.GetMaxRecoveryAttempts())
+                {
+                    Item.Status = RecoveryStatus.NotPossible;
+
+                    _alert.Alert(_alert.GetAlertTypeForWatchDogProcessNotPossible(), "AFTER " + Params.GetMaxRecoveryAttempts().ToString() + " ATTEMPS WAS NOT POSSIBLE TO START THE " + Item.ProcessItem.Name, EAlertLevel.HIGH);
+                }
             }
             else
             {
@@ -110,22 +138,6 @@ namespace Domain.UseCases
             }
 
             return Item.Status == RecoveryStatus.Running;
-        }
-
-        private void TryToStartProcess(RecoveryItem Item)
-        {
-            TimeSpan oTimeOut = TimeSpan.FromSeconds(5);
-
-            //TODO: Start Process
-            //Item.ServiceItem.Start();
-            //Item.ServiceItem.WaitForStatus(ServiceControllerStatus.Running, oTimeOut);
-
-            //if (Item.ServiceItem.Status == ServiceControllerStatus.Running)
-            //{
-            //    Item.Status = RecoveryStatus.Running;
-
-            //    AlertHelper.Alert(AlertConsts.AGENT_WATCHDOG_PROCESS_ON, Item.ServiceItem.DisplayName + " ON", EAlertLevel.INFO);                
-            //}
-        }
+        }        
     }
 }
