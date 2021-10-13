@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITMonitor.Infra.IoC", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITMonitor.Application", "..\EasyITMonitor.Application\EasyITMonitor.Application.csproj", "{0FFA3C07-D80E-4358-88B3-2DF8A9805D3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyITMonitor.Domain.Test", "..\EasyITMonitor.Domain.Test\EasyITMonitor.Domain.Test.csproj", "{9D96E923-781F-4258-87F4-F027CC2C54DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{0FFA3C07-D80E-4358-88B3-2DF8A9805D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FFA3C07-D80E-4358-88B3-2DF8A9805D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FFA3C07-D80E-4358-88B3-2DF8A9805D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D96E923-781F-4258-87F4-F027CC2C54DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D96E923-781F-4258-87F4-F027CC2C54DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D96E923-781F-4258-87F4-F027CC2C54DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D96E923-781F-4258-87F4-F027CC2C54DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
