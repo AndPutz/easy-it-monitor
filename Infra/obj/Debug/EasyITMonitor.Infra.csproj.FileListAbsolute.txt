@@ -12,3 +12,17 @@ C:\Pessoal\EasyITMonitor\easy-it-monitor\Infra\obj\Debug\EasyITMonitor.Infra.csp
 C:\Pessoal\EasyITMonitor\easy-it-monitor\Infra\obj\Debug\Infra.dll
 C:\Pessoal\EasyITMonitor\easy-it-monitor\Infra\obj\Debug\Infra.pdb
 C:\Pessoal\EasyITMonitor\easy-it-monitor\Infra\bin\Debug\Infra.dll.config
+C:\Projetos\Pessoal\easy-it-monitor\Infra\bin\Debug\Infra.dll.config
+C:\Projetos\Pessoal\easy-it-monitor\Infra\bin\Debug\Infra.dll
+C:\Projetos\Pessoal\easy-it-monitor\Infra\bin\Debug\Infra.pdb
+C:\Projetos\Pessoal\easy-it-monitor\Infra\bin\Debug\Domain.dll
+C:\Projetos\Pessoal\easy-it-monitor\Infra\bin\Debug\Newtonsoft.Json.dll
+C:\Projetos\Pessoal\easy-it-monitor\Infra\bin\Debug\Domain.pdb
+C:\Projetos\Pessoal\easy-it-monitor\Infra\bin\Debug\Newtonsoft.Json.xml
+C:\Projetos\Pessoal\easy-it-monitor\Infra\obj\Debug\EasyITMonitor.Infra.csproj.AssemblyReference.cache
+C:\Projetos\Pessoal\easy-it-monitor\Infra\obj\Debug\Infra.Properties.Resources.resources
+C:\Projetos\Pessoal\easy-it-monitor\Infra\obj\Debug\EasyITMonitor.Infra.csproj.GenerateResource.cache
+C:\Projetos\Pessoal\easy-it-monitor\Infra\obj\Debug\EasyITMonitor.Infra.csproj.CoreCompileInputs.cache
+C:\Projetos\Pessoal\easy-it-monitor\Infra\obj\Debug\EasyITMonitor.Infra.csproj.CopyComplete
+C:\Projetos\Pessoal\easy-it-monitor\Infra\obj\Debug\Infra.dll
+C:\Projetos\Pessoal\easy-it-monitor\Infra\obj\Debug\Infra.pdb

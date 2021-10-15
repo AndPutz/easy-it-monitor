@@ -6788,32 +6788,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andre\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Carla\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitorWebServer\\EasyITMonitor.WebUI.csproj",
+      "projectUniqueName": "C:\\Projetos\\Pessoal\\easy-it-monitor\\EasyITMonitorWebServer\\EasyITMonitor.WebUI.csproj",
       "projectName": "EasyITMonitor.WebUI",
-      "projectPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitorWebServer\\EasyITMonitor.WebUI.csproj",
-      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitorWebServer\\obj\\",
+      "projectPath": "C:\\Projetos\\Pessoal\\easy-it-monitor\\EasyITMonitorWebServer\\EasyITMonitor.WebUI.csproj",
+      "packagesPath": "C:\\Users\\Carla\\.nuget\\packages\\",
+      "outputPath": "C:\\Projetos\\Pessoal\\easy-it-monitor\\EasyITMonitorWebServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+        "C:\\Users\\Carla\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -6821,8 +6822,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Infra.Ioc\\EasyITMonitor.Infra.IoC.csproj": {
-              "projectPath": "C:\\Pessoal\\EasyITMonitor\\easy-it-monitor\\EasyITMonitor.Infra.Ioc\\EasyITMonitor.Infra.IoC.csproj"
+            "C:\\Projetos\\Pessoal\\easy-it-monitor\\EasyITMonitor.Infra.Ioc\\EasyITMonitor.Infra.IoC.csproj": {
+              "projectPath": "C:\\Projetos\\Pessoal\\easy-it-monitor\\EasyITMonitor.Infra.Ioc\\EasyITMonitor.Infra.IoC.csproj"
             }
           }
         }

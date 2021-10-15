@@ -1,4 +1,5 @@
 ﻿using Domain.Interfaces;
+using Domain.Validation;
 using System;
 
 namespace Domain.UseCases
@@ -23,7 +24,15 @@ namespace Domain.UseCases
         
         public UseCase(IAgentParams agentParams)
         {
-            Params = agentParams;            
+            ValidateDomain(agentParams);           
+        }
+
+        private void ValidateDomain(IAgentParams agentParams)
+        {
+            DomainExceptionValidation.When(agentParams == null,
+                "AgentParams object is required!");
+
+            Params = agentParams;
         }
     }
 }

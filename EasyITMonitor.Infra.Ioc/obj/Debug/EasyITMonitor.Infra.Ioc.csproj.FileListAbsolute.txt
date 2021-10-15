@@ -11,3 +11,16 @@ C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Ioc\bin\Debug\Domai
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Ioc\bin\Debug\EasyITMonitor.Application.pdb
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Ioc\bin\Debug\EasyITMonitor.Infra.Data.pdb
 C:\Pessoal\EasyITMonitor\easy-it-monitor\EasyITMonitor.Infra.Ioc\obj\Debug\EasyITMonitor.Infra.Ioc.csproj.CopyComplete
+C:\Projetos\Pessoal\easy-it-monitor\EasyITMonitor.Infra.Ioc\bin\Debug\EasyITMonitor.Infra.Ioc.dll
+C:\Projetos\Pessoal\easy-it-monitor\EasyITMonitor.Infra.Ioc\bin\Debug\EasyITMonitor.Infra.Ioc.pdb
+C:\Projetos\Pessoal\easy-it-monitor\EasyITMonitor.Infra.Ioc\bin\Debug\Domain.dll
+C:\Projetos\Pessoal\easy-it-monitor\EasyITMonitor.Infra.Ioc\bin\Debug\EasyITMonitor.Application.dll
+C:\Projetos\Pessoal\easy-it-monitor\EasyITMonitor.Infra.Ioc\bin\Debug\EasyITMonitor.Infra.Data.dll
+C:\Projetos\Pessoal\easy-it-monitor\EasyITMonitor.Infra.Ioc\bin\Debug\Domain.pdb
+C:\Projetos\Pessoal\easy-it-monitor\EasyITMonitor.Infra.Ioc\bin\Debug\EasyITMonitor.Application.pdb
+C:\Projetos\Pessoal\easy-it-monitor\EasyITMonitor.Infra.Ioc\bin\Debug\EasyITMonitor.Infra.Data.pdb
+C:\Projetos\Pessoal\easy-it-monitor\EasyITMonitor.Infra.Ioc\obj\Debug\EasyITMonitor.Infra.IoC.csproj.AssemblyReference.cache
+C:\Projetos\Pessoal\easy-it-monitor\EasyITMonitor.Infra.Ioc\obj\Debug\EasyITMonitor.Infra.IoC.csproj.CoreCompileInputs.cache
+C:\Projetos\Pessoal\easy-it-monitor\EasyITMonitor.Infra.Ioc\obj\Debug\EasyITMonitor.Infra.IoC.csproj.CopyComplete
+C:\Projetos\Pessoal\easy-it-monitor\EasyITMonitor.Infra.Ioc\obj\Debug\EasyITMonitor.Infra.Ioc.dll
+C:\Projetos\Pessoal\easy-it-monitor\EasyITMonitor.Infra.Ioc\obj\Debug\EasyITMonitor.Infra.Ioc.pdb

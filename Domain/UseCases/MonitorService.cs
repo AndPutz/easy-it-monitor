@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces;
+using Domain.Validation;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -19,9 +20,24 @@ namespace Domain.UseCases
 
         public MonitorService(IAgentParams agentParams, IAlert alert, IAccess access, IMachineData machineData) : base(agentParams, access, machineData)
         {
-            MemCounter = new PerformanceCounter("Memory", "Available MBytes");
-            CpuUsage = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+            ValidateDomain(agentParams, alert);            
+        }
+
+        private void ValidateDomain(IAgentParams agentParams, IAlert alert)
+        {
+            DomainExceptionValidation.When(agentParams.HasServicesParam() == false,
+                "Services Params is required! Probably the Init Config doesnt worked. Please add at least one Service to run the Agent Monitor");
+
+            DomainExceptionValidation.When(alert == null, "Alert object is required!");
             _Alert = alert;
+
+            MemCounter = new PerformanceCounter("Memory", "Available MBytes");
+            DomainExceptionValidation.When(MemCounter == null, 
+                "Was not possible to instance the PerformanceCounter for Memory RAM! Please verify if the user has administration privilegies.");
+
+            CpuUsage = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+            DomainExceptionValidation.When(CpuUsage == null, 
+                "Was not possible to instance the PerformanceCounter for CPU! Please verify if the user has administration privilegies.");
         }
 
         public override void Save()

@@ -1,6 +1,7 @@
 ﻿using Domain.DTO;
 using Domain.Entities;
 using Domain.Interfaces;
+using Domain.Validation;
 using System.Collections.Generic;
 
 namespace Domain.UseCases
@@ -15,10 +16,8 @@ namespace Domain.UseCases
 
         public Monitor(IAgentParams agentParams, IAccess access, IMachineData machineData) : base(agentParams)
         {
-            agentParams.Load();
+            ValidateDomain(agentParams, access, machineData);
 
-            DTO = new DTOMonitor(access);
-            _MachineData = machineData;
             MonitoringItems = new List<MonitorDetail>();            
         }
 
@@ -45,5 +44,28 @@ namespace Domain.UseCases
         {
 
         }
+
+        private void ValidateDomain(IAgentParams agentParams, IAccess access, IMachineData machineData)
+        {
+            DomainExceptionValidation.When(agentParams == null,
+                "Agent Params object is required!");
+
+            agentParams.Load();
+
+            DomainExceptionValidation.When(access == null,
+                "Access object is required!");
+
+            DTO = new DTOMonitor(access);
+
+            DomainExceptionValidation.When(DTO == null,
+                "Error to instance DTO with these Access object!");
+
+            DomainExceptionValidation.When(machineData == null,
+                "Machine Data object is required!");
+
+            _MachineData = machineData;
+        }
+
+        
     }
 }

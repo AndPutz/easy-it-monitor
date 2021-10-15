@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces;
+using Domain.Validation;
 
 namespace Domain.UseCases
 {
@@ -7,7 +8,7 @@ namespace Domain.UseCases
     {
         public MonitorProcess(IAgentParams agentParams, IAccess access, IMachineData machineData) : base (agentParams, access, machineData)
         {
-
+            ValidateDomain(agentParams);
         }
 
         public override void Save()
@@ -17,6 +18,12 @@ namespace Domain.UseCases
                 Detail.IsService = false;
                 DTO.SaveMonitoring(Detail);
             }
+        }
+
+        private void ValidateDomain(IAgentParams agentParams)
+        {
+            DomainExceptionValidation.When(agentParams.HasProcessesParam() == false,
+                "Process Params is required! Probably the Init Config doesnt worked. Please add at least one Process to run the Agent Monitor");
         }
     }
 }
